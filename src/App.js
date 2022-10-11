@@ -1,12 +1,21 @@
-//import logo from './logo.svg';
-//import "./App.css";
 import React from "react";
+import About from "./About.js";
+import Home from "./Home.js";
+import Recipes from "./Recipes.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Test</h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/recipes" element={<Recipes />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
