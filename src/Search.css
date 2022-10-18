@@ -1,0 +1,30 @@
+.Search form input {
+  margin: 2px 5px;
+  border-radius: 4px;
+}
+
+.Search #search-form {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.Search #home-search-bar {
+  background-color: #efefef;
+  border: none;
+  padding: 8px 10px;
+}
+
+.Search #home-submit-button {
+  background-color: chocolate;
+  border: none;
+  color: white;
+  opacity: 0.9;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+.Search #home-submit-button:hover {
+  background-color: chocolate;
+  cursor: pointer;
+  opacity: 1;
+}
