@@ -1,10 +1,10 @@
 import React from "react";
-import "./FruitCatalogue.css";
+import "./MultipleFruits.css";
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import LoadingSpinner from "./LoadingSpinner";
 
-export default function FruitCatalogue() {
+export default function MultipleFruits() {
   const [fruits, setFruits] = useState([]);
 
   const searchFruit = () => {
@@ -88,7 +88,7 @@ export default function FruitCatalogue() {
 
   if (setFruits) {
     return (
-      <div className="FruitCatalogue">
+      <div className="MultipleFruits">
         <div className="section">
           <Button onClick={searchFruit}>View all fruits</Button>
 
@@ -98,7 +98,7 @@ export default function FruitCatalogue() {
     );
   } else {
     return (
-      <div className="FruitCatalogue">
+      <div className="MultipleFruits">
         <LoadingSpinner />
       </div>
     );

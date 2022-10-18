@@ -27,7 +27,8 @@ footer a:hover {
   margin-bottom: 2px;
 }
 
-.footer-top {
+.footer-top,
+.footer-info {
   display: flex;
 }
 
@@ -71,8 +72,8 @@ footer a:hover {
 /* Desktop footer */
 @media only screen and (min-width: 768px) {
   .footer-top {
-    margin: 0px 40px;
-    padding: 10px 0px;
+    margin: 0px 104px;
+    padding: 10px 12px;
   }
 
   .footer-logo {
@@ -81,8 +82,7 @@ footer a:hover {
 
   .footer-profiles,
   .footer-nav {
-    margin: 8px 0px;
-    margin-left: 20px;
+    margin: 10px 30px;
     text-align: left;
   }
 }
