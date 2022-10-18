@@ -1,12 +1,13 @@
 import React from "react";
+import Navigation from "./Navigation";
 
-
-function Recipes() {
-    return( 
-        <div>
-            <h1>Recipes</h1>
-        </div>
-    );
+export default function Recipes() {
+  return (
+    <div className="Recipes">
+      <Navigation />
+      <div className="container">
+        <h1>Recipes</h1>
+      </div>
+    </div>
+  );
 }
-
-export default Recipes;
