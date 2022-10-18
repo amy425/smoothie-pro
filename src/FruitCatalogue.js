@@ -92,7 +92,9 @@ export default function FruitCatalogue() {
   if (setFruits) {
     return (
       <div className="FruitCatalogue">
-        <Button onClick={searchFruit}>View all fruits</Button>
+        <div className="section">
+          <Button onClick={searchFruit}>View all fruits</Button>
+        </div>
         <div className="catalogue">{fruitListings}</div>
       </div>
     );
