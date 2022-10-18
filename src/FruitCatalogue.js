@@ -19,13 +19,10 @@ export default function FruitCatalogue() {
       });
   };
 
-  //Send response back into fruit catalogue function??
-
   function check(data) {
-    // check if arr is array
     const result = Array.isArray(data);
 
-    if (result) {
+    if (result === true) {
       console.log(`[${data}] is an array.`);
     } else {
       console.log(`${data} is not an array.`);

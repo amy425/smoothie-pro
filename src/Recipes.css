@@ -5,7 +5,7 @@
 
 .Recipes .smoothie-bar {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .Recipes .smoothie-bar Button {
