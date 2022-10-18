@@ -91,8 +91,9 @@ export default function FruitCatalogue() {
       <div className="FruitCatalogue">
         <div className="section">
           <Button onClick={searchFruit}>View all fruits</Button>
+
+          <div className="catalogue">{fruitListings}</div>
         </div>
-        <div className="catalogue">{fruitListings}</div>
       </div>
     );
   } else {

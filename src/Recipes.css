@@ -6,8 +6,16 @@
 .Recipes .smoothie-bar {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .Recipes .smoothie-bar Button {
   margin: 5px;
+}
+
+.Recipes .smoothies {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
 }
