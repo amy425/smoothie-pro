@@ -40,8 +40,10 @@ export default function Recipes() {
 
       <hr></hr>
       <div className="container">
-        <h1>{smoothieName}</h1>
-        <ul>{smoothieFruits}</ul>
+        <div className="section">
+          <h1>{smoothieName}</h1>
+          <ul>{smoothieFruits}</ul>
+        </div>
       </div>
     </div>
   );
