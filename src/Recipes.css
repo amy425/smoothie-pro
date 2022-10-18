@@ -1,0 +1,13 @@
+.Recipes .section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.Recipes .smoothie-bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Recipes .smoothie-bar Button {
+  margin: 5px;
+}
