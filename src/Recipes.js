@@ -4,6 +4,8 @@ import "./Recipes.css";
 import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
 
+import Footer from "./Footer";
+
 export default function Recipes() {
   const [smoothieName, setSmoothieName] = useState("");
   const [smoothieFruits, setSmoothieFruits] = useState("");
@@ -25,24 +27,21 @@ export default function Recipes() {
         <h1>Recipes</h1>
         <div className="section smoothie-bar">
           <Button onClick={showSmoothie}>Tropical</Button>
-
           <Button onClick={showSmoothie}>Smoothie 2</Button>
-
           <Button onClick={showSmoothie}>Smoothie 3</Button>
-
           <Button onClick={showSmoothie}>Smoothie 4</Button>
-
           <Button onClick={showSmoothie}>Smoothie 5</Button>
-
           <Button onClick={showSmoothie}>Smoothie 6</Button>
         </div>
       </div>
 
       <hr></hr>
-      <div className="container">
+
+      <div className="container section">
         <h1>{smoothieName}</h1>
         <ul>{smoothieFruits}</ul>
       </div>
+      <Footer />
     </div>
   );
 }

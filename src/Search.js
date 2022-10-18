@@ -6,7 +6,11 @@ export default function Search() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(singleFruit);
+    if (singleFruit === "") {
+      alert(`Please enter the name of a fruit!`);
+    } else {
+      console.log(singleFruit);
+    }
   }
 
   function updateFruit(event) {
