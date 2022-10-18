@@ -1,13 +1,20 @@
 import React from "react";
+import "./Home.css";
 import Search from "./Search";
+import ViewAllFruits from "./ViewAllFruits";
+import ViewRandomFruit from "./ViewRandomFruit";
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-      <h1>Smoothie Pro</h1>
-      <Search />
+    <div className="Home">
+      <div className="container">
+        <h1>Smoothie Pro</h1>
+        <Search />
+        <div className="other-search-options">
+          <ViewAllFruits />
+          <ViewRandomFruit />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default Home;
