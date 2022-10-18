@@ -4,11 +4,12 @@ import Navigation from "./Navigation";
 import Search from "./Search";
 import ViewAllFruits from "./ViewAllFruits";
 import ViewRandomFruit from "./ViewRandomFruit";
+import FruitCatalogue from "./FruitCatalogue";
 import Footer from "./Footer";
 
-export default function Home() {
+export default function Fruits() {
   return (
-    <div className="Home">
+    <div className="Fruits">
       <Navigation />
       <div className="container section">
         <Search />
@@ -17,6 +18,8 @@ export default function Home() {
           <ViewRandomFruit />
         </div>
       </div>
+      <hr></hr>
+      <FruitCatalogue />
       <Footer />
     </div>
   );

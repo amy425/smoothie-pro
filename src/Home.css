@@ -1,15 +1,25 @@
-.Home .other-search-options button {
-  font-size: 14px;
-  margin: 5px;
-}
-
 body {
   padding-top: 100px;
+  text-align: center;
 }
 
 /* Header */
 .navbar-brand {
-  font-size: 36px !important;
   font-weight: 600;
 }
 /* Header END */
+
+.other-search-options {
+  display: flex;
+  justify-content: center;
+}
+
+.other-search-options button {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
