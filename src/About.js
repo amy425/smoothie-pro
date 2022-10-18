@@ -1,12 +1,13 @@
-import React from "react"
+import React from "react";
+import Navigation from "./Navigation";
 
-
-function About() {
-    return( 
-        <div>
-            <h1>About</h1>
-        </div>
-    );
+export default function About() {
+  return (
+    <div className="About">
+      <Navigation />
+      <div className="container">
+        <h1>About</h1>
+      </div>
+    </div>
+  );
 }
-
-export default About;
