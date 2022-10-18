@@ -1,0 +1,43 @@
+.listing {
+  background-color: hsl(228, 14%, 93%);
+  border-radius: 10px;
+  margin: 10px 10px;
+  opacity: 0.75;
+  padding: 20px;
+  text-align: left;
+  width: 250px;
+  height: 250px;
+}
+
+.catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.listing:hover {
+  background-color: hsl(228, 14%, 93%);
+  opacity: 0.9;
+}
+
+.listing h2 {
+  font-size: 22px;
+}
+
+.listing h3 {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.listing li {
+  font-size: 14px;
+}
+
+.listing-details {
+  display: flex;
+}
+
+.deactivated {
+  opacity: 0.4;
+  pointer-events: none;
+}
