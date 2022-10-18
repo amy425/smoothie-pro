@@ -95,7 +95,8 @@ footer a:hover {
     flex-direction: column;
   }
 
-  .footer-top {
+  .footer-top,
+  .footer-info {
     flex-direction: column;
   }
 
