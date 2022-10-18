@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Search.css";
 
 export default function Search() {
+  let [singleFruit, setSingleFruit] = useState("");
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(singleFruit);
+  }
+
+  function updateFruit(event) {
+    let fruitName = event.target.value.toLowerCase().trim().replace(/\s/g, "");
+    setSingleFruit(fruitName);
+  }
+
   return (
     <div className="Search">
-      <form id="search-form">
+      <form id="search-form" onSubmit={handleSubmit}>
         <input
           id="home-search-bar"
-          type="text"
+          type="search"
           placeholder="Search for a fruit..."
-        ></input>
-        <input id="home-submit-button" type="submit" value="➜"></input>
+          onChange={updateFruit}
+          autoFocus="{true}"
+        />
+        <input id="home-submit-button" type="submit" value="➜" />
       </form>
     </div>
   );
