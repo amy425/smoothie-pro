@@ -4,10 +4,16 @@ import Navigation from "./Navigation";
 import Search from "./Search";
 import ViewAllFruits from "./ViewAllFruits";
 import ViewRandomFruit from "./ViewRandomFruit";
-import FruitCatalogue from "./FruitCatalogue";
+import Sort from "./Sort";
+import Dropdowns from "./Dropdowns";
+import SingleFruit from "./SingleFruit";
+import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
 
 export default function Fruits() {
+  let singleFruit = `apple`;
+  let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
+
   return (
     <div className="Fruits">
       <Navigation />
@@ -20,7 +26,18 @@ export default function Fruits() {
       </div>
       <hr></hr>
       <div className="container">
-        <FruitCatalogue />
+        <div className="sort-section">
+          <Sort />
+        </div>
+        <div className="main">
+          <div className="left-main">
+            <Dropdowns />
+          </div>
+          <div className="right-main">
+            <SingleFruit url={singleFruitUrl} />
+            <MultipleFruits />
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

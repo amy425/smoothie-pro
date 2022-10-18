@@ -14,7 +14,7 @@ export default function Navigation() {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand href="#home">Smoothie Pro</Navbar.Brand>
+          <Navbar.Brand href="/">Smoothie Pro</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
