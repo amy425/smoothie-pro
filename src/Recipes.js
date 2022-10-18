@@ -41,6 +41,7 @@ export default function Recipes() {
         <h1>{smoothieName}</h1>
         <ul>{smoothieFruits}</ul>
       </div>
+      
       <Footer />
     </div>
   );
