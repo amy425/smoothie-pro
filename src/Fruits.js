@@ -19,7 +19,9 @@ export default function Fruits() {
         </div>
       </div>
       <hr></hr>
-      <FruitCatalogue />
+      <div className="container">
+        <FruitCatalogue />
+      </div>
       <Footer />
     </div>
   );
