@@ -8,12 +8,12 @@ import Footer from "./Footer";
 export default function Recipes() {
   const [smoothieName, setSmoothieName] = useState("");
   const [smoothieFruits, setSmoothieFruits] = useState("");
-
+  
   let tropical = ["Pineapple", "Mango", "Banana"];
 
   function showSmoothie(event) {
     setSmoothieName(event.target.innerHTML);
-    let ingredients = tropical.map((ingredient, index) => {
+    let ingredients = tropical.map ((ingredient, index) =>{
       return (
         <div className="listing" key={index}>
           <h2>{ingredient}</h2>
@@ -65,10 +65,10 @@ export default function Recipes() {
       <div className="container">
         <h1>Recipes</h1>
         <div className="section smoothie-bar">
-          <Button onClick={showSmoothie}>Tropical</Button>
-          <Button onClick={showSmoothie}>Smoothie 2</Button>
-          <Button onClick={showSmoothie}>Smoothie 3</Button>
-          <Button onClick={showSmoothie}>Smoothie 4</Button>
+          <Button onClick={showSmoothie}>Tropical Twist</Button>
+          <Button onClick={showSmoothie}>Strawberry Splash</Button>
+          <Button onClick={showSmoothie}>Energizer</Button>
+          <Button onClick={showSmoothie}>Berry Blast</Button>
         </div>
       </div>
 
