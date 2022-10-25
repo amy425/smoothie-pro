@@ -9,9 +9,9 @@ import Footer from "./Footer";
 export default function Home() {
   return (
     <div className="Home">
-      <h1>Smoothie Pro</h1>
       <Navigation />
       <div className="container section">
+        <h1>Smoothie Pro</h1>
         <Search />
         <div className="other-search-options">
           <ViewAllFruits />

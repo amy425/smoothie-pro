@@ -1,21 +1,20 @@
-.Recipes .section {
+.Menu .section {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.Recipes .smoothie-bar {
+.Menu .smoothie-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.Recipes .smoothie-bar Button {
+.Menu .smoothie-bar Button {
   margin: 5px;
 }
 
-.Recipes .smoothies {
+.Menu .smoothies {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: center;
 }
