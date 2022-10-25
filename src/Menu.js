@@ -63,7 +63,8 @@ export default function Recipes() {
     <div className="Recipes">
       <Navigation />
       <div className="container">
-        <h1>Recipes</h1>
+        <h1>Menu</h1>
+        <h2 className="price">All Smoothies For £3 | 2 For £5 | 5 For £10 </h2>
         <div className="section smoothie-bar">
           <Button onClick={showSmoothie}>Tropical Twist</Button>
           <Button onClick={showSmoothie}>Strawberry Splash</Button>
