@@ -11,7 +11,7 @@ import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
 
 export default function Fruits() {
-  let singleFruit = `apple`;
+  let singleFruit = `raspberry`;
   let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
 
   return (
