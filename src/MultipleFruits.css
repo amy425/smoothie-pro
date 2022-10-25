@@ -1,12 +1,8 @@
 .listing {
-  background-color: hsl(228, 14%, 93%);
-  border-radius: 10px;
   margin: 10px 10px;
-  opacity: 0.75;
+  opacity: 0.9;
   padding: 20px;
   text-align: left;
-  width: 250px;
-  height: 250px;
 }
 
 .catalogue {
@@ -16,8 +12,7 @@
 }
 
 .listing:hover {
-  background-color: hsl(228, 14%, 93%);
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .listing h2 {
@@ -40,4 +35,12 @@
 .deactivated {
   opacity: 0.4;
   pointer-events: none;
+}
+
+.new {
+  display: flex;
+}
+
+.card {
+  border-width: 0px;
 }

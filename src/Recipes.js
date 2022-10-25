@@ -75,7 +75,7 @@ export default function Recipes() {
       <hr></hr>
 
       <div className="container section">
-        <h1>{smoothieName}</h1>
+        <h2>{smoothieName}</h2>
         <div className="smoothies">{smoothieFruits}</div>
       </div>
       <Footer />
