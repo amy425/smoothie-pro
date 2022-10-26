@@ -59,11 +59,15 @@ export default function DropdownFamily() {
   const dropdownOptions = (currentFamilyList) =>
     currentFamilyList.map((family, index) => {
       return (
-        <Dropdown.Item key={index} onClick={filterByFamily} href="#/action-1">
-          {family}
-        </Dropdown.Item>
+        <div>
+          <label key={index} onClick={filterByFamily}>
+            <input type="checkbox" />
+            {family}
+          </label>
+        </div>
       );
     });
+
   const fetchFamilies = () => {
     fetch("https://fruityvice.com/api/fruit/all")
       .then((response) => {
@@ -78,16 +82,7 @@ export default function DropdownFamily() {
 
   return (
     <div className="DropdownFamily">
-      <div className="family-dropdown">
-        <DropdownButton
-          variant="secondary"
-          className="dropdown-button family-title"
-          title="Family"
-        >
-          {dropdownOptions(Array.from(familyFilterOptions))}
-        </DropdownButton>
-      </div>
-      <div></div>
+      {dropdownOptions(Array.from(familyFilterOptions))}
     </div>
   );
 }

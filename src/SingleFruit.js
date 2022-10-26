@@ -83,7 +83,7 @@ export default function SingleFruit(props) {
     return (
       <div className="SingleFruit">
         <Button onClick={searchFruit}>
-          show fruit fed down from home component
+          show fruit fed down from fruit component
         </Button>
         <div className="catalogue">{singleFruitSearch}</div>
       </div>
