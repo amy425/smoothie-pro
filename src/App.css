@@ -1,6 +1,22 @@
+/* Site wide */
+.btn {
+  background-color: rgb(124, 88, 124);
+  border-color: rgb(124, 88, 124);
+}
+
+.btn:hover {
+  background-color: rgb(124, 88, 124);
+  border-color: rgb(124, 88, 124);
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 /* Footer */
 footer {
-  background-color: hsla(228, 14%, 93%, 0.8);
+  background-color: hsl(228, 14%, 93%);
   font-size: 12px;
 }
 
@@ -43,11 +59,11 @@ footer a:hover {
 
 /* Project notes banner */
 .project-notes {
-  background-color: #000;
+  background-color: rgb(124, 88, 124);
   color: #fff;
   flex-basis: 100%;
   line-height: 18px;
-  opacity: 0.8;
+  opacity: 0.95;
   padding: 5px 60px;
 }
 

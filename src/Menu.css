@@ -18,3 +18,9 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.Menu h2.price {
+  text-decoration: underline 0.1rem;
+  color: rgb(124, 88, 124);
+  font-size: 1.5rem;
+}

@@ -1,7 +1,8 @@
 import React from "react";
+import "./About.css";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
-import jugs from "./jugs.jpg";
+import jugs from "./images/jugs.jpg";
 
 export default function About() {
   return (
@@ -18,11 +19,16 @@ export default function About() {
             Smoothie Pro is now London's leading independent smoothie
             distribution. Our aim is to deliver freshly prepared juices to your
             door. We offer a monthly subscriptions where to can choose from our
-            selected smoothies. So head on to our Menu page and get started.
+            selected smoothies. So head on to our{" "}
+            <a href="/menu" rel="noreferrer">
+              Menu
+            </a>{" "}
+            page and get started.
           </p>
-        </div>
-        <div className="photo">
-          <img src={jugs} alt="jugs"></img>
+
+          <div className="photo">
+            <img src={jugs} alt="jugs"></img>
+          </div>
         </div>
       </div>
       <Footer />
