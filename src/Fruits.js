@@ -11,20 +11,21 @@ import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
 
 export default function Fruits() {
-  let singleFruit = `raspberry`;
+  let singleFruit = `apricot`;
   let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
 
   return (
     <div className="Fruits">
       <Navigation />
-      <div className="container section">
+      <div className="container">
+        <h1>Fruits</h1>
         <Search />
         <div className="other-search-options">
           <ViewAllFruits />
           <ViewRandomFruit />
         </div>
       </div>
-      <hr></hr>
+      <hr />
       <div className="container">
         <div className="sort-section">
           <Sort />
