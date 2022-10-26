@@ -3,6 +3,7 @@ import "./MultipleFruits.css";
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import LoadingSpinner from "./LoadingSpinner";
+import FruitImage from "./FruitImage";
 
 export default function MultipleFruits() {
   const [fruits, setFruits] = useState([]);
@@ -36,50 +37,55 @@ export default function MultipleFruits() {
   //Render listings for all fruits in array
   const fruitListings = fruits.map((fruit) => {
     return (
-      <div className="listing" key={fruit.id}>
-        <h2>{fruit.name}</h2>
-        <div className="listing-details">
-          <div className="listing-info">
-            <h3>Info</h3>
-            <ul>
-              <li>
-                <span className="detail-headings">Genus: </span>
-                {fruit.genus}
-              </li>
-              <li>
-                <span className="detail-headings">Family: </span>
-                {fruit.family}
-              </li>
-              <li>
-                <span className="detail-headings">Order: </span>
-                {fruit.order}
-              </li>
-            </ul>
-          </div>
-          <div className="listing-nutrition">
-            <h3>Nutrition</h3>
-            <ul>
-              <li>
-                <span className="detail-headings">Carbohydrates: </span>
-                {fruit.nutritions.carbohydrates}
-              </li>
-              <li>
-                <span className="detail-headings">Protein: </span>
-                {fruit.nutritions.protein}
-              </li>
-              <li>
-                <span className="detail-headings">Fat: </span>
-                {fruit.nutritions.fat}
-              </li>
-              <li>
-                <span className="detail-headings">Calories: </span>
-                {fruit.nutritions.calories}
-              </li>
-              <li>
-                <span className="detail-headings">Sugar: </span>
-                {fruit.nutritions.sugar}
-              </li>
-            </ul>
+      <div className="listing-card" key={fruit.id}>
+        <div className="listing-image">
+          <FruitImage />
+        </div>
+        <div className="listing">
+          <h2>{fruit.name}</h2>
+          <div className="listing-details">
+            <div className="listing-info">
+              <h3>Info</h3>
+              <ul>
+                <li>
+                  <span className="detail-headings">Genus: </span>
+                  {fruit.genus}
+                </li>
+                <li>
+                  <span className="detail-headings">Family: </span>
+                  {fruit.family}
+                </li>
+                <li>
+                  <span className="detail-headings">Order: </span>
+                  {fruit.order}
+                </li>
+              </ul>
+            </div>
+            <div className="listing-nutrition">
+              <h3>Nutrition</h3>
+              <ul>
+                <li>
+                  <span className="detail-headings">Carbohydrates: </span>
+                  {fruit.nutritions.carbohydrates}
+                </li>
+                <li>
+                  <span className="detail-headings">Protein: </span>
+                  {fruit.nutritions.protein}
+                </li>
+                <li>
+                  <span className="detail-headings">Fat: </span>
+                  {fruit.nutritions.fat}
+                </li>
+                <li>
+                  <span className="detail-headings">Calories: </span>
+                  {fruit.nutritions.calories}
+                </li>
+                <li>
+                  <span className="detail-headings">Sugar: </span>
+                  {fruit.nutritions.sugar}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
