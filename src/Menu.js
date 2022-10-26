@@ -4,53 +4,64 @@ import "./Menu.css";
 import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
 import Footer from "./Footer";
+import FruitImage from "./FruitImage";
 
-export default function Recipes() {
+export default function Menu() {
   const [smoothieName, setSmoothieName] = useState("");
   const [smoothieFruits, setSmoothieFruits] = useState("");
 
-  let tropical = ["Pineapple", "Mango", "Banana"];
+  //let smoothies = [];
+
+  let tropicalTwist = ["Pineapple", "Mango", "Banana"];
+  //let berryBlast = ["Strawberry", "Raspberry", "Banana", "Blueberry"];
+  //let strawberrySplash = ["Strawberry", "Apple", "Banana", "Peach"];
+  //let energizer = ["", "Apple", "Banana", "Peach"];
 
   function showSmoothie(event) {
     setSmoothieName(event.target.innerHTML);
-    let ingredients = tropical.map((ingredient, index) => {
+    let ingredients = tropicalTwist.map((ingredient, index) => {
       return (
-        <div className="listing" key={index}>
-          <h2>{ingredient}</h2>
-          <div className="listing-details">
-            <div className="listing-info">
-              <h3>Info</h3>
-              <ul>
-                <li>
-                  <span className="detail-headings">Genus: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Family: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Order: </span>
-                </li>
-              </ul>
-            </div>
-            <div className="listing-nutrition">
-              <h3>Nutrition</h3>
-              <ul>
-                <li>
-                  <span className="detail-headings">Carbohydrates: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Protein: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Fat: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Calories: </span>
-                </li>
-                <li>
-                  <span className="detail-headings">Sugar: </span>
-                </li>
-              </ul>
+        <div className="listing-card" key={index}>
+          <div className="listing-image">
+            <FruitImage />
+          </div>
+          <div className="listing">
+            <h3>{ingredient}</h3>
+            <div className="listing-details">
+              <div className="listing-info">
+                <h4>Info</h4>
+                <ul>
+                  <li>
+                    <span className="detail-headings">Genus: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Family: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Order: </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="listing-nutrition">
+                <h4>Nutrition</h4>
+                <ul>
+                  <li>
+                    <span className="detail-headings">Carbohydrates: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Protein: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Fat: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Calories: </span>
+                  </li>
+                  <li>
+                    <span className="detail-headings">Sugar: </span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

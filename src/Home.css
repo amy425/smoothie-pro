@@ -7,12 +7,6 @@ body {
   min-height: 61vh;
 }
 
-/* Header */
-.navbar-brand {
-  font-weight: 600;
-}
-/* Header END */
-
 .other-search-options {
   display: flex;
   justify-content: center;

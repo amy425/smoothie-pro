@@ -1,46 +1,61 @@
-.listing {
-  margin: 10px 10px;
-  opacity: 0.9;
-  padding: 20px;
-  text-align: left;
-}
-
 .catalogue {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.listing:hover {
+.listing-card {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px 10px;
+  opacity: 0.95;
+  padding: 20px;
+  text-align: left;
+}
+
+.listing-card:hover {
   opacity: 1;
 }
 
-.listing h2 {
-  font-size: 22px;
+.listing-card h3 {
+  font-size: 32px;
+  margin-left: 5px;
 }
 
-.listing h3 {
+.listing-card h4 {
   text-decoration: underline;
   font-size: 16px;
 }
 
-.listing li {
+.listing-card li {
   font-size: 14px;
+}
+
+.listing-card .detail-headings {
+  font-weight: 700;
+}
+
+.listing {
+  margin-left: 20px;
 }
 
 .listing-details {
   display: flex;
 }
 
-.deactivated {
-  opacity: 0.4;
-  pointer-events: none;
+.listing-card ul {
+  padding-left: 0px;
+  list-style: none;
 }
 
-.new {
-  display: flex;
+.listing-info,
+.listing-nutrition {
+  margin: 20px 10px 0px;
 }
 
-.card {
-  border-width: 0px;
+.listing-card {
+  -webkit-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
 }

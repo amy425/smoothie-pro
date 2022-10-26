@@ -24,6 +24,11 @@
 
 /* UPDATED DROPDOWN */
 
+.deactivated {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .dropdowns {
   background-color: #fff;
   padding: 20px 0px 10px;

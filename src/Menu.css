@@ -19,3 +19,53 @@
   color: rgb(124, 88, 124);
   font-size: 1.5rem;
 }
+
+.listing-card {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  margin: 10px 10px;
+  opacity: 0.95;
+  padding: 20px;
+  text-align: left;
+}
+
+.listing-card:hover {
+  opacity: 1;
+}
+
+.listing-card h3 {
+  font-size: 32px;
+  margin-left: 5px;
+}
+
+.listing-card h4 {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+.listing-card li {
+  font-size: 14px;
+}
+
+.listing-card .detail-headings {
+  font-weight: 700;
+}
+
+.listing {
+  margin-left: 20px;
+}
+
+.listing-details {
+  display: flex;
+}
+
+.listing-card ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.listing-info,
+.listing-nutrition {
+  margin: 20px 10px 0px;
+}
