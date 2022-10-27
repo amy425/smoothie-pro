@@ -38,54 +38,52 @@ export default function MultipleFruits() {
   const fruitListings = fruits.map((fruit) => {
     return (
       <div className="listing-card" key={fruit.id}>
+        <h3>{fruit.name}</h3>
         <div className="listing-image">
           <FruitImage />
         </div>
-        <div className="listing">
-          <h2>{fruit.name}</h2>
-          <div className="listing-details">
-            <div className="listing-info">
-              <h3>Info</h3>
-              <ul>
-                <li>
-                  <span className="detail-headings">Genus: </span>
-                  {fruit.genus}
-                </li>
-                <li>
-                  <span className="detail-headings">Family: </span>
-                  {fruit.family}
-                </li>
-                <li>
-                  <span className="detail-headings">Order: </span>
-                  {fruit.order}
-                </li>
-              </ul>
-            </div>
-            <div className="listing-nutrition">
-              <h3>Nutrition</h3>
-              <ul>
-                <li>
-                  <span className="detail-headings">Carbohydrates: </span>
-                  {fruit.nutritions.carbohydrates}
-                </li>
-                <li>
-                  <span className="detail-headings">Protein: </span>
-                  {fruit.nutritions.protein}
-                </li>
-                <li>
-                  <span className="detail-headings">Fat: </span>
-                  {fruit.nutritions.fat}
-                </li>
-                <li>
-                  <span className="detail-headings">Calories: </span>
-                  {fruit.nutritions.calories}
-                </li>
-                <li>
-                  <span className="detail-headings">Sugar: </span>
-                  {fruit.nutritions.sugar}
-                </li>
-              </ul>
-            </div>
+        <div className="listing-details">
+          <div className="listing-info">
+            <h4>Info</h4>
+            <ul>
+              <li>
+                <span className="detail-headings">Genus: </span>
+                {fruit.genus}
+              </li>
+              <li>
+                <span className="detail-headings">Family: </span>
+                {fruit.family}
+              </li>
+              <li>
+                <span className="detail-headings">Order: </span>
+                {fruit.order}
+              </li>
+            </ul>
+          </div>
+          <div className="listing-nutrition">
+            <h4>Nutrition</h4>
+            <ul>
+              <li>
+                <span className="detail-headings">Carbohydrates: </span>
+                {fruit.nutritions.carbohydrates}
+              </li>
+              <li>
+                <span className="detail-headings">Protein: </span>
+                {fruit.nutritions.protein}
+              </li>
+              <li>
+                <span className="detail-headings">Fat: </span>
+                {fruit.nutritions.fat}
+              </li>
+              <li>
+                <span className="detail-headings">Calories: </span>
+                {fruit.nutritions.calories}
+              </li>
+              <li>
+                <span className="detail-headings">Sugar: </span>
+                {fruit.nutritions.sugar}
+              </li>
+            </ul>
           </div>
         </div>
       </div>

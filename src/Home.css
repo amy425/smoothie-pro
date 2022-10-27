@@ -21,3 +21,11 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.main {
+  display: flex;
+}
+
+.Fruits {
+  background-color: #e5e5ff !important;
+}
