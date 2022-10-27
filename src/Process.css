@@ -1,0 +1,29 @@
+.Process .section {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 60px 10px;
+  opacity: 0.9;
+  padding: 50px;
+  text-align: left;
+}
+
+.Process .section:hover {
+  opacity: 1;
+}
+
+.Process .workflow {
+  display: flex;
+  margin-top: 60px;
+}
+
+.Process .heading-info {
+  margin: 0px 30px;
+}
+
+.Process .heading-info:first-child {
+  margin: 0px 0px 10px 0px;
+}
+
+.Process .heading-info:last-child {
+  margin: 0px 0px 0px 10px;
+}

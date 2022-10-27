@@ -6,10 +6,8 @@ export default function DropdownFamily() {
   const [familyFilterOptions, setFamilyFilterOptions] = useState("");
 
   function filterByFamily(props) {
-    //setOrderTitle
-    let familyDropdownTitle = document.getElementsByClassName("family-title");
-    console.log(props.target.innerHTML);
-    familyDropdownTitle.innerHTML = `Family: ${props.target.innerHTML}`;
+    let url = props.target.innerHTML.toLowerCase();
+    console.log(`/family/${url}`);
   }
 
   function tidyData(data) {
@@ -57,8 +55,8 @@ export default function DropdownFamily() {
   const dropdownOptions = (currentFamilyList) =>
     currentFamilyList.map((family, index) => {
       return (
-        <div>
-          <label key={index} onClick={filterByFamily}>
+        <div key={index}>
+          <label onClick={filterByFamily}>
             <input type="checkbox" />
             {family}
           </label>
