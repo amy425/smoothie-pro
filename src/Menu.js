@@ -97,6 +97,7 @@ export default function Menu() {
           <Button onClick={showSmoothie}>Strawberry Splash</Button>
           <Button onClick={showSmoothie}>Energizer</Button>
           <Button onClick={showSmoothie}>Berry Blast</Button>
+          <Button onClick={showSmoothie}>Create Your Own</Button>
         </div>
       </div>
 
