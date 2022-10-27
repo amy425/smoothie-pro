@@ -14,3 +14,79 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+img{
+  width: 500px;
+  height: 350px;
+}
+
+h1{
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color:rgb(124, 88, 124)
+}
+
+p.about{
+  margin-left: 10%;
+  font-size: 1.1rem;
+}
+
+h2.price{
+  text-decoration: underline 0.1rem;
+  color:rgb(124, 88, 124);
+  font-size:1.5rem;
+
+}
+
+div.section.smoothie-bar{
+width:fit-content;
+}
+
+
+div.pineapple{
+  width:7rem;
+  margin:0;
+  margin:10%;
+
+
+}
+img.pine{
+  width: 7rem;
+  height:7rem;
+  float:left;
+  margin-top:1.5rem;
+  margin:25px 55px 0px;
+  
+}
+
+img.strawberry{
+  width: 10rem;
+  height:13rem;
+  float:left;
+  margin:4px 7px 0px;
+
+}
+
+div.orange{
+  width:7rem;
+  float:right;
+  margin: 10%;
+}
+
+img.orange{
+  float:right;
+  width: 7rem;
+  height:9rem;
+  padding-top: 1rem;
+  margin-top:1.6rem;
+  
+}
+
+img.mango{
+  float:right;
+  width: 4rem;
+  height:4rem;  
+  margin:70px 90px 10px;
+  
+
+}
+

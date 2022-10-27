@@ -18,8 +18,7 @@ export default function About() {
             juices. Since starting our business we are thrilled to announce
             Smoothie Pro is now London's leading independent smoothie
             distribution. Our aim is to deliver freshly prepared juices to your
-            door. We offer monthly subscriptions where you can choose from our
-            selected smoothies. So head on to our{" "}
+            door. We offer set smoothies which include our customers favourtie 'Energizer' or simply create your own. So head on to our{" "}
             <a href="/menu" rel="noreferrer">
               Menu
             </a>{" "}

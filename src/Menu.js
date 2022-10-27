@@ -4,6 +4,10 @@ import "./Menu.css";
 import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
 import Footer from "./Footer";
+import pineapple from "./pineapple.png";
+import orange from "./orange.png";
+import strawberry from "./strawberry.png";
+import mango2 from "./mango2.png";
 import FruitImage from "./FruitImage";
 
 export default function Menu() {
@@ -76,11 +80,24 @@ export default function Menu() {
       <div className="container">
         <h1>Menu</h1>
         <h2 className="price">All Smoothies For £3 | 2 For £5 | 5 For £10 </h2>
+        <div className="column">
+      <img className="pine"src={pineapple} alt="pineapple.png"></img>
+      </div>
+      <div className="column">
+      <img className="orange"src={orange} alt="orange.png"></img>
+      </div>
+      <div className="column">
+      <img className="strawberry"src={strawberry} alt="strawberry.png"></img>
+      </div>
+      <div className="column">
+      <img className="mango"src={mango2} alt="mango2.png"></img>
+      </div>
         <div className="section smoothie-bar">
           <Button onClick={showSmoothie}>Tropical Twist</Button>
           <Button onClick={showSmoothie}>Strawberry Splash</Button>
           <Button onClick={showSmoothie}>Energizer</Button>
           <Button onClick={showSmoothie}>Berry Blast</Button>
+          <Button onClick={showSmoothie}>Create Your Own</Button>
         </div>
       </div>
 
