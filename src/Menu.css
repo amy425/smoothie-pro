@@ -1,7 +1,23 @@
-.catalogue {
+.Menu .smoothie-bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.Menu .smoothie-bar Button {
+  margin: 5px;
+}
+
+.Menu .smoothies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Menu h2.price {
+  text-decoration: underline 0.1rem;
+  color: rgb(124, 88, 124);
+  font-size: 1.5rem;
 }
 
 .listing-card {
@@ -52,10 +68,4 @@
 .listing-info,
 .listing-nutrition {
   margin: 20px 10px 0px;
-}
-
-.listing-card {
-  -webkit-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
-  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
 }

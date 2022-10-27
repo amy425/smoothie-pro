@@ -1,6 +1,4 @@
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 import "./Dropdowns.css";
 import { useEffect, useState } from "react";
 
@@ -8,10 +6,8 @@ export default function DropdownFamily() {
   const [familyFilterOptions, setFamilyFilterOptions] = useState("");
 
   function filterByFamily(props) {
-    //setOrderTitle
-    let familyDropdownTitle = document.getElementsByClassName("family-title");
-    console.log(props.target.innerHTML);
-    familyDropdownTitle.innerHTML = `Family: ${props.target.innerHTML}`;
+    let url = props.target.innerHTML.toLowerCase();
+    console.log(`/family/${url}`);
   }
 
   function tidyData(data) {
@@ -59,11 +55,15 @@ export default function DropdownFamily() {
   const dropdownOptions = (currentFamilyList) =>
     currentFamilyList.map((family, index) => {
       return (
-        <Dropdown.Item key={index} onClick={filterByFamily} href="#/action-1">
-          {family}
-        </Dropdown.Item>
+        <div key={index}>
+          <label onClick={filterByFamily}>
+            <input type="checkbox" />
+            {family}
+          </label>
+        </div>
       );
     });
+
   const fetchFamilies = () => {
     fetch("https://fruityvice.com/api/fruit/all")
       .then((response) => {
@@ -78,16 +78,7 @@ export default function DropdownFamily() {
 
   return (
     <div className="DropdownFamily">
-      <div className="family-dropdown">
-        <DropdownButton
-          variant="secondary"
-          className="dropdown-button family-title"
-          title="Family"
-        >
-          {dropdownOptions(Array.from(familyFilterOptions))}
-        </DropdownButton>
-      </div>
-      <div></div>
+      {dropdownOptions(Array.from(familyFilterOptions))}
     </div>
   );
 }

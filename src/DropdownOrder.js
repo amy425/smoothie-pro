@@ -1,6 +1,4 @@
 import React from "react";
-import Dropdown from "react-bootstrap/Dropdown";
-import DropdownButton from "react-bootstrap/DropdownButton";
 import "./Dropdowns.css";
 import { useEffect, useState } from "react";
 
@@ -59,9 +57,12 @@ export default function DropdownOrder() {
   const dropdownOptions = (currentOrderList) =>
     currentOrderList.map((order, index) => {
       return (
-        <Dropdown.Item key={index} onClick={filterByOrder} href="#/action-1">
-          {order}
-        </Dropdown.Item>
+        <div>
+          <label key={index} onClick={filterByOrder}>
+            <input type="checkbox" />
+            {order}
+          </label>
+        </div>
       );
     });
 
@@ -79,17 +80,7 @@ export default function DropdownOrder() {
 
   return (
     <div className="DropdownOrder">
-      <div className="order-dropdown">
-        <DropdownButton
-          variant="secondary"
-          className="dropdown-button"
-          title="Order"
-          id="order-title"
-        >
-          {dropdownOptions(Array.from(orderFilterOptions))}
-        </DropdownButton>
-      </div>
-      <div></div>
+      {dropdownOptions(Array.from(orderFilterOptions))}
     </div>
   );
 }

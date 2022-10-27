@@ -1,0 +1,26 @@
+h1 {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: rgb(124, 88, 124);
+}
+
+.About p.about {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.1rem;
+}
+
+.about a {
+  color: rgb(124, 88, 124);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.About img {
+  width: 500px;
+  height: 350px;
+}
+
+.About .photo {
+  padding: 10px;
+  margin-top: 40px;
+}

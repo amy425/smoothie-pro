@@ -3,6 +3,7 @@ import About from "./About.js";
 import Home from "./Home.js";
 import Fruits from "./Fruits.js";
 import Menu from "./Menu.js";
+import Process from "./Process.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/fruits" element={<Fruits />} />
-          <Route path="/Menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/process" element={<Process />} />
         </Routes>
       </div>
     </BrowserRouter>
