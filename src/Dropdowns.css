@@ -1,8 +1,3 @@
-.dropdown-section {
-  display: flex;
-  margin: 10px 10px;
-}
-
 .filter-section {
   width: 250px;
   padding: 10px;
@@ -17,7 +12,6 @@
 }
 
 .sort-section {
-  margin-top: 40px;
   display: flex;
   justify-content: flex-end;
 }
