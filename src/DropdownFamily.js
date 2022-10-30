@@ -6,8 +6,8 @@ export default function DropdownFamily() {
   const [familyFilterOptions, setFamilyFilterOptions] = useState("");
 
   function filterByFamily(props) {
-    let url = props.target.innerHTML.toLowerCase();
-    console.log(`/family/${url}`);
+    let fruit = props.target.innerHTML;
+    console.log(fruit);
   }
 
   function tidyData(data) {

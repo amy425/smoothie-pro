@@ -9,6 +9,9 @@ import Dropdowns from "./Dropdowns";
 import SingleFruit from "./SingleFruit";
 import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
+//import SmoothieRecipe from "./SmoothieRecipe";
+
+import Listing from "./Listing";
 
 export default function Fruits() {
   let singleFruit = `apricot`;
@@ -35,6 +38,7 @@ export default function Fruits() {
             <Dropdowns />
           </div>
           <div className="right-main">
+            <Listing />
             <SingleFruit url={singleFruitUrl} />
             <MultipleFruits />
           </div>

@@ -1,9 +1,3 @@
-.catalogue {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .listing-card {
   background-color: #fff;
   border-radius: 10px;

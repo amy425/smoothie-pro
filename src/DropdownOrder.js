@@ -57,8 +57,8 @@ export default function DropdownOrder() {
   const dropdownOptions = (currentOrderList) =>
     currentOrderList.map((order, index) => {
       return (
-        <div>
-          <label key={index} onClick={filterByOrder}>
+        <div key={index}>
+          <label onClick={filterByOrder}>
             <input type="checkbox" />
             {order}
           </label>

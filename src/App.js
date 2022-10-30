@@ -4,6 +4,7 @@ import Home from "./Home.js";
 import Fruits from "./Fruits.js";
 import Menu from "./Menu.js";
 import Process from "./Process.js";
+import Smoothies from "./Smoothies.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/fruits" element={<Fruits />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/process" element={<Process />} />
+          <Route path="/smoothies" element={<Smoothies />} />
         </Routes>
       </div>
     </BrowserRouter>

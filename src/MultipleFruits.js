@@ -3,7 +3,11 @@ import "./MultipleFruits.css";
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import LoadingSpinner from "./LoadingSpinner";
-import FruitImage from "./FruitImage";
+import "./Smoothies.css";
+//import FruitImage from "./FruitImage";
+
+import Card from "react-bootstrap/Card";
+import cherry from "./images/cherry.jpg";
 
 export default function MultipleFruits() {
   const [fruits, setFruits] = useState([]);
@@ -33,15 +37,91 @@ export default function MultipleFruits() {
       console.log(newArray[0].family);
     }
   }
+  /*<div className="listing-image">
+          <FruitImage />
+        </div>*/
 
   //Render listings for all fruits in array
   const fruitListings = fruits.map((fruit) => {
     return (
-      <div className="listing-card" key={fruit.id}>
-        <h3>{fruit.name}</h3>
-        <div className="listing-image">
-          <FruitImage />
+      <div className="Listing" key={fruit.id}>
+        <Card className="bg-dark text-white smoothie-listing">
+          <Card.Img src={cherry} alt="cherry" className="smoothie-images" />
+          <Card.ImgOverlay>
+            <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
+          </Card.ImgOverlay>
+          <Card.Body>
+            <div className="listing-details">
+              <div className="listing-info">
+                <h4>Info</h4>
+                <ul>
+                  <li>
+                    <span className="detail-headings">Genus: </span>
+                    {fruit.genus}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Family: </span>
+                    {fruit.family}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Order: </span>
+                    {fruit.order}
+                  </li>
+                </ul>
+              </div>
+              <div className="listing-nutrition">
+                <h4>Nutrition</h4>
+                <ul>
+                  <li>
+                    <span className="detail-headings">Carbohydrates: </span>
+                    {fruit.nutritions.carbohydrates}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Protein: </span>
+                    {fruit.nutritions.protein}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Fat: </span>
+                    {fruit.nutritions.fat}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Calories: </span>
+                    {fruit.nutritions.calories}
+                  </li>
+                  <li>
+                    <span className="detail-headings">Sugar: </span>
+                    {fruit.nutritions.sugar}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card.Body>
+        </Card>
+      </div>
+    );
+  });
+
+  if (setFruits) {
+    return (
+      <div className="MultipleFruits">
+        <div className="section">
+          <Button onClick={searchFruit}>View all fruits</Button>
+
+          <div className="catalogue">{fruitListings}</div>
         </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className="MultipleFruits">
+        <LoadingSpinner />
+      </div>
+    );
+  }
+}
+
+/*
+
         <div className="listing-details">
           <div className="listing-info">
             <h4>Info</h4>
@@ -86,25 +166,4 @@ export default function MultipleFruits() {
             </ul>
           </div>
         </div>
-      </div>
-    );
-  });
-
-  if (setFruits) {
-    return (
-      <div className="MultipleFruits">
-        <div className="section">
-          <Button onClick={searchFruit}>View all fruits</Button>
-
-          <div className="catalogue">{fruitListings}</div>
-        </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="MultipleFruits">
-        <LoadingSpinner />
-      </div>
-    );
-  }
-}
+        */

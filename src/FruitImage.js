@@ -19,7 +19,7 @@ export default function FruitImage(props) {
 
   return (
     <div className="FruitImage">
-      <img src={apricot} alt={props.name} width="250" />
+      <img src={apricot} alt={props.name} />
     </div>
   );
 }

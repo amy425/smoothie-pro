@@ -7,7 +7,9 @@ export default function Footer() {
       <div className="Footer">
         <div className="footer-top">
           <div className="footer-logo">
-            <h3>SP</h3>
+            <h3>
+              <a href="/">SP</a>
+            </h3>
           </div>
           <div className="footer-info">
             <div className="footer-profiles">
@@ -70,13 +72,13 @@ export default function Footer() {
 
             <div className="footer-nav">
               <h4>Explore</h4>
-              <a href="/">Home</a>
-              <br></br>
               <a href="/about">About</a>
               <br></br>
               <a href="/fruits">Fruits</a>
               <br></br>
-              <a href="/recipes">Recipes</a>
+              <a href="/menu">Menu</a>
+              <br></br>
+              <a href="/process">Process</a>
             </div>
           </div>
         </div>
