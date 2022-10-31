@@ -29,3 +29,15 @@ body {
 .Fruits {
   background-color: #e5e5ff !important;
 }
+
+.left-main {
+  position: sticky;
+}
+
+.container-fluid {
+  --bs-gutter-x: 0rem;
+}
+
+.divider {
+  margin-bottom: 0;
+}
