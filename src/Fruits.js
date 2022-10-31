@@ -20,7 +20,7 @@ export default function Fruits() {
   return (
     <div className="Fruits">
       <Navigation />
-      <div className="container">
+      <div className="container-fluid">
         <h1>Fruits</h1>
         <Search />
         <div className="other-search-options">
@@ -28,20 +28,19 @@ export default function Fruits() {
           <ViewRandomFruit />
         </div>
       </div>
-      <hr />
-      <div className="container">
-        <div className="sort-section">
-          <Sort />
+      <hr className="divider" />
+
+      <div className="main">
+        <div className="left-main">
+          <Dropdowns />
         </div>
-        <div className="main">
-          <div className="left-main">
-            <Dropdowns />
+        <div className="right-main">
+          <div className="sort-section">
+            <Sort />
           </div>
-          <div className="right-main">
-            <Listing />
-            <SingleFruit url={singleFruitUrl} />
-            <MultipleFruits />
-          </div>
+          <Listing />
+          <SingleFruit url={singleFruitUrl} />
+          <MultipleFruits />
         </div>
       </div>
       <Footer />

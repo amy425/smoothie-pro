@@ -17,19 +17,20 @@
   opacity: 1;
 }
 
-.listing-card h3 {
+.listing-info h3 {
   font-size: 24px;
   text-decoration: underline;
   margin: 10px;
 }
 
-.listing-card h4 {
+.listing-info h4,
+.listing-nutrition h4 {
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.listing-card li {
+.listing-info li {
   font-size: 15px !important;
 }
 
@@ -39,11 +40,12 @@
   margin: 10px;
 }
 
-.listing-card .detail-headings {
-  font-weight: 700;
+.listing-details .detail-headings {
+  font-weight: 800;
 }
 
-.listing-card ul {
+.listing-info ul,
+.listing-nutrition ul {
   padding-left: 0px;
   list-style: none;
 }
@@ -66,4 +68,37 @@
 .listing-nutrition {
   margin: 5px;
   padding: 10px;
+}
+
+/*NEW*/
+
+.smoothie-images {
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+}
+
+.smoothie-images:hover {
+  width: 300px;
+  border-radius: 0;
+}
+
+.smoothie-listing {
+  width: 300px;
+  border-radius: 0;
+  border-width: 0px;
+  opacity: 0.95;
+  margin: 10px;
+}
+
+.smoothie-listing:hover {
+  opacity: 1;
+}
+
+.smoothie-title {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: left;
+  padding: 10px;
+  opacity: 1 !important;
 }
