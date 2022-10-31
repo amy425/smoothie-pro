@@ -26,10 +26,6 @@ body {
   display: flex;
 }
 
-.Fruits {
-  background-color: #e5e5ff !important;
-}
-
 .left-main {
   position: sticky;
 }
