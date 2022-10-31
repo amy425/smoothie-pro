@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Search.css";
 
-export default function Search() {
+export default function Search({ searchToFruit }) {
   let [singleFruit, setSingleFruit] = useState("");
 
   function handleSubmit(event) {
@@ -10,6 +10,7 @@ export default function Search() {
       alert(`Please enter the name of a fruit!`);
     } else {
       console.log(singleFruit);
+      searchToFruit(singleFruit);
     }
   }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Navigation from "./Navigation";
 import Search from "./Search";
@@ -14,7 +14,13 @@ import Footer from "./Footer";
 import Listing from "./Listing";
 
 export default function Fruits() {
-  let singleFruit = `apricot`;
+  const [searchData, setSearchData] = useState("");
+
+  const searchToFruit = (searchData) => {
+    setSearchData(searchData);
+  };
+
+  let singleFruit = `${searchData}`;
   let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
 
   return (
@@ -22,7 +28,7 @@ export default function Fruits() {
       <Navigation />
       <div className="container-fluid">
         <h1>Fruits</h1>
-        <Search />
+        <Search searchToFruit={searchToFruit} />
         <div className="other-search-options">
           <ViewAllFruits />
           <ViewRandomFruit />
