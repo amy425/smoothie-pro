@@ -12,6 +12,8 @@ import strawberry from "./strawberry.png";
 import mango2 from "./mango2.png";
 import SmoothieRecipe from "./SmoothieRecipe";
 
+
+
 export default function Menu() {
   const [smoothieName, setSmoothieName] = useState("");
   const [smoothieFruits, setSmoothieFruits] = useState("");
