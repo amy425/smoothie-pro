@@ -11,8 +11,7 @@ import orange from "./orange.png";
 import strawberry from "./strawberry.png";
 import mango2 from "./mango2.png";
 import SmoothieRecipe from "./SmoothieRecipe";
-
-
+import SmoothieFruits from "./SmoothieFruits";
 
 export default function Menu() {
   const [smoothieName, setSmoothieName] = useState("");
@@ -104,6 +103,9 @@ export default function Menu() {
       <div className="container section">
         <h2>{smoothieName}</h2>
         <div className="smoothies">{smoothieFruits}</div>
+      </div>
+      <div className="section">
+        <SmoothieFruits />
       </div>
       <div className="section">
         <SmoothieRecipe />
