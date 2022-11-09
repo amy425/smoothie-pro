@@ -10,11 +10,14 @@ import SingleFruit from "./SingleFruit";
 import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
 //import SmoothieRecipe from "./SmoothieRecipe";
+import NoResults from "./NoResults";
 
 import Listing from "./Listing";
 
 export default function Fruits() {
   const [searchData, setSearchData] = useState("");
+  //const [familyData, setFamilyData] = useState("");
+  //const [allData, setAllData] = useState("");
 
   const searchToFruit = (searchData) => {
     setSearchData(searchData);
@@ -22,6 +25,22 @@ export default function Fruits() {
 
   let singleFruit = `${searchData}`;
   let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
+
+  /*
+  const allToFruit = (allData) => {
+    setAllData(allData);
+  };*/
+
+  let multipleFruitsUrl = `https://fruityvice.com/api/fruit/all`;
+
+  /*
+  const familyToFruit = (familyData) => {
+    setFamilyData(familyData);
+  };
+
+  let familyFruit = `${familyData}`;
+  let familyFruitUrl = `https://fruityvice.com/api/fruit/family/${familyFruit}`;
+*/
 
   return (
     <div className="Fruits">
@@ -46,7 +65,8 @@ export default function Fruits() {
           </div>
           <Listing />
           <SingleFruit url={singleFruitUrl} />
-          <MultipleFruits />
+          <MultipleFruits url={multipleFruitsUrl} />
+          <NoResults />
         </div>
       </div>
       <Footer />

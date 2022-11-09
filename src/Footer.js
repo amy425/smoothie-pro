@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import logo from "./images/smoothie-pro-logo.png";
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
       <div className="Footer">
         <div className="footer-top">
           <div className="footer-logo">
-            <h3>
-              <a href="/">SP</a>
-            </h3>
+            <a href="/">
+              <img className="logo" src={logo} alt="Smoothie Pro logo"></img>
+            </a>
           </div>
           <div className="footer-info">
             <div className="footer-profiles">
@@ -17,7 +18,7 @@ export default function Footer() {
               <p>
                 Muhammad Faizan |{" "}
                 <a
-                  href="https://linkedin.co.uk"
+                  href="https://www.linkedin.com/in/muhammad-faizan-90a063159"
                   target="blank"
                   rel="noreferrer"
                 >
@@ -34,14 +35,6 @@ export default function Footer() {
               </p>
               <p>
                 Yasmine Jarvis |{" "}
-                <a
-                  href="https://linkedin.co.uk"
-                  target="blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
-                </a>{" "}
-                |{" "}
                 <a
                   href="https://github.com/yasminejpj"
                   target="blank"
@@ -94,6 +87,13 @@ export default function Footer() {
             </a>
             <br></br>
             With special thanks to Leo Ho & Kirti Lad!
+            <br></br>
+            <a
+              href="https://www.flaticon.com/free-icons/smoothie"
+              title="smoothie icons"
+            >
+              Smoothie icons created by AmethystDesign - Flaticon →
+            </a>
           </p>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "./App.css";
+//import logo from "./images/smoothie-pro-logo.png";
 
 export default function Navigation() {
   return (

@@ -37,9 +37,6 @@ export default function MultipleFruits() {
       console.log(newArray[0].family);
     }
   }
-  /*<div className="listing-image">
-          <FruitImage />
-        </div>*/
 
   //Render listings for all fruits in array
   const fruitListings = fruits.map((fruit) => {
