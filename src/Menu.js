@@ -3,14 +3,13 @@ import { useState } from "react";
 import "./Menu.css";
 import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
-//import Smoothies from "./Smoothies";
+import SmoothieRecipe from "./SmoothieRecipe";
+import SmoothieFruits from "./SmoothieFruits";
 import Footer from "./Footer";
 import pineapple from "./images/animation/pineapple.png";
 import orange from "./images/animation/orange.png";
 import strawberry from "./images/animation/strawberry.png";
-import mango2 from "./images/animation/mango2.png";
-import SmoothieRecipe from "./SmoothieRecipe";
-import SmoothieFruits from "./SmoothieFruits";
+import mango from "./images/animation/mango.png";
 
 export default function Menu() {
   const [smoothieName, setSmoothieName] = useState("");
@@ -87,14 +86,13 @@ export default function Menu() {
           ></img>
         </div>
         <div className="column">
-          <img className="mango" src={mango2} alt="mango2.png"></img>
+          <img className="mango" src={mango} alt="mango.png"></img>
         </div>
         <div className="section smoothie-bar">
           <Button onClick={showSmoothie}>Tropical Twist</Button>
           <Button onClick={showSmoothie}>Strawberry Splash</Button>
           <Button onClick={showSmoothie}>Energizer</Button>
           <Button onClick={showSmoothie}>Berry Blast</Button>
-          <Button onClick={showSmoothie}>Create Your Own</Button>
         </div>
       </div>
       <div className="container section">

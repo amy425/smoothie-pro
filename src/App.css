@@ -19,11 +19,13 @@
   padding: 0px;
 }
 
+/* SITE WIDE END */
+
 /* Header */
 .navbar-brand {
   font-weight: 600;
 }
-/* Header END */
+/* HEADER END */
 
 /* Footer */
 footer {
@@ -50,6 +52,27 @@ footer a:hover {
   color: #000;
 }
 
+.credit {
+  font-size: 10px;
+  text-align: right;
+}
+
+.credit a {
+  padding-right: 10px;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
+
+.credit {
+  border-top: solid 0.5px #fff;
+}
+
+.footer-logo {
+  padding-top: 16px;
+}
+
 .footer-nav a {
   margin-bottom: 2px;
 }
@@ -57,11 +80,6 @@ footer a:hover {
 .footer-top,
 .footer-info {
   display: flex;
-}
-
-.footer-logo h3 {
-  margin-bottom: 20px;
-  margin-top: 30px;
 }
 
 .logo {
@@ -75,7 +93,7 @@ footer a:hover {
   flex-basis: 100%;
   line-height: 18px;
   opacity: 0.95;
-  padding: 5px 60px;
+  padding: 5px 0px;
 }
 
 .project-notes a {
@@ -96,11 +114,19 @@ footer a:hover {
   font-weight: 700;
 }
 
+.footer-top {
+  padding: 30px 12px 20px;
+}
+
+.thanks {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
 /* Desktop footer */
 @media only screen and (min-width: 768px) {
   .footer-top {
     margin: 0px 104px;
-    padding: 10px 12px;
   }
 
   .footer-logo {
@@ -117,9 +143,12 @@ footer a:hover {
 /* Mobile footer */
 @media only screen and (max-width: 768px) {
   footer {
-    align-items: center;
     display: flex;
     flex-direction: column;
+  }
+
+  .footer-logo {
+    padding-bottom: 20px;
   }
 
   .footer-top,
@@ -134,4 +163,4 @@ footer a:hover {
   }
 }
 
-/* Footer END */
+/* FOOTER END */

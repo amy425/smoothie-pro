@@ -77,24 +77,27 @@ export default function Footer() {
         </div>
 
         <div className="project-notes">
-          <p>
-            <a
-              href="https://github.com/amy425/smoothie-pro"
-              target="blank"
-              className="git-project-link"
-            >
-              View project on GitHub →
-            </a>
-            <br></br>
-            With special thanks to Leo Ho & Kirti Lad!
-            <br></br>
+          <div className="thanks">
+            <p>
+              <a
+                href="https://github.com/amy425/smoothie-pro"
+                target="blank"
+                className="git-project-link"
+              >
+                View project on GitHub →
+              </a>
+              <br></br>
+              With special thanks to Leo Ho & Kirti Lad!
+            </p>
+          </div>
+          <div className="credit">
             <a
               href="https://www.flaticon.com/free-icons/smoothie"
               title="smoothie icons"
             >
               Smoothie icons created by AmethystDesign - Flaticon →
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
