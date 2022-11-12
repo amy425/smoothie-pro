@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
-import FruitImage from "./FruitImage.js";
 
 import Card from "react-bootstrap/Card";
 import cherry from "./images/cherry.jpg";
