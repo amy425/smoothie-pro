@@ -1,10 +1,15 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import FruitApi from "./FruitApi";
 import { useState } from "react";
+import MultipleFruits from "./MultipleFruits";
+import Dropdowns from "./Dropdowns";
+import Sort from "./Sort";
+import Listing from "./Listing";
+import SingleFruit from "./SingleFruit";
 
-export default function ViewAllFruits() {
+export default function ViewAllFruits({ singleFruitUrl, url }) {
   const [showFruit, setShowFruits] = useState(false);
+  const [sortBy, setSortBy] = useState('Name');
 
   function allFruits() {
     setShowFruits(true);
@@ -23,9 +28,21 @@ export default function ViewAllFruits() {
         <Button onClick={allFruits}>View all fruits</Button>
         <Button onClick={randomUrl}>Random fruit</Button>
       </div>
-      {(showFruit || showRandomFruit > 0) && (
-        <FruitApi showRandomFruit={showRandomFruit} />
-      )}
+      <div className="main">
+        <div className="left-main">
+          <Dropdowns />
+        </div>
+        {(showFruit || showRandomFruit > 0) && (
+          <MultipleFruits showRandomFruit={showRandomFruit} url={url} sortBy={sortBy.toLowerCase()} />
+        )}
+        <div className="right-main">
+          <div className="sort-section">
+            <Sort sortBy={sortBy} setSortBy={setSortBy} />
+          </div>
+          <Listing />
+          <SingleFruit url={singleFruitUrl} />
+        </div>
+      </div>
     </div>
   );
 }

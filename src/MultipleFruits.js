@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MultipleFruits.css";
 import { useState } from "react";
-import Button from "react-bootstrap/esm/Button";
 import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
 import Card from "react-bootstrap/Card";
@@ -41,68 +40,152 @@ import tomato from "./images/fruits/tomato.jpg";
 import watermelon from "./images/fruits/watermelon.jpg";
 import none from "./images/fruits/none.jpg";
 
-export default function MultipleFruits() {
-  const [fruits, setFruits] = useState([]);
 
-  const imageMapping = {
-    apple: apple,
-    apricot: apricot,
-    avocado: avocado,
-    banana: banana,
-    blackberry: blackberry,
-    blueberry: blueberry,
-    cherry: cherry,
-    dragonfruit: dragonfruit,
-    durian: durian,
-    feijoa: feijoa,
-    fig: fig,
-    gooseberry: gooseberry,
-    greenapple: greenapple,
-    grape: grape,
-    grapes: grapes,
-    guava: none,
-    kiwi: none,
-    kiwifruit: none,
-    lemon: lemon,
-    lime: lime,
-    lingonberry: lingonberry,
-    lychee: lychee,
-    mango: none,
-    melon: melon,
-    morus: none,
-    orange: orange,
-    papaya: papaya,
-    passionfruit: passionfruit,
-    pear: pear,
-    persimmon: persimmon,
-    pineapple: none,
-    pitahaya: pitahaya,
-    plum: plum,
-    pomegranate: pomegranate,
-    raspberry: raspberry,
-    strawberry: strawberry,
-    tangerine: tangerine,
-    tomato: tomato,
-    watermelon: watermelon,
-  };
+const imageMapping = {
+  apple,
+  apricot,
+  avocado,
+  banana,
+  blackberry,
+  blueberry,
+  cherry,
+  dragonfruit,
+  durian,
+  feijoa,
+  fig,
+  gooseberry,
+  greenapple,
+  grape,
+  grapes: grapes,
+  guava: none,
+  kiwi: none,
+  kiwifruit: none,
+  lemon: lemon,
+  lime: lime,
+  lingonberry: lingonberry,
+  lychee: lychee,
+  mango: none,
+  melon: melon,
+  morus: none,
+  orange: orange,
+  papaya: papaya,
+  passionfruit: passionfruit,
+  pear: pear,
+  persimmon: persimmon,
+  pineapple: none,
+  pitahaya: pitahaya,
+  plum: plum,
+  pomegranate: pomegranate,
+  raspberry: raspberry,
+  strawberry: strawberry,
+  tangerine: tangerine,
+  tomato: tomato,
+  watermelon: watermelon,
+};
+
+function RenderFruit({ fruit }) {
+  return <div className="Listing" key={fruit.id}>
+    <Card className="bg-dark text-white smoothie-listing">
+      <Card.Img
+        src={imageMapping[fruit.name.toLowerCase()]}
+        alt={fruit.name}
+        className="smoothie-images"
+      />
+      <Card.ImgOverlay>
+        <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
+      </Card.ImgOverlay>
+      <Card.Body>
+        <div className="listing-details">
+          <div className="listing-info">
+            <h4>Info</h4>
+            <ul>
+              <li>
+                <span className="detail-headings">Genus: </span>
+                {fruit.genus}
+              </li>
+              <li>
+                <span className="detail-headings">Family: </span>
+                {fruit.family}
+              </li>
+              <li>
+                <span className="detail-headings">Order: </span>
+                {fruit.order}
+              </li>
+            </ul>
+          </div>
+          <div className="listing-nutrition">
+            <h4>Nutrition</h4>
+            <ul>
+              <li>
+                <span className="detail-headings">Carbohydrates: </span>
+                {fruit.nutritions.carbohydrates}
+              </li>
+              <li>
+                <span className="detail-headings">Protein: </span>
+                {fruit.nutritions.protein}
+              </li>
+              <li>
+                <span className="detail-headings">Fat: </span>
+                {fruit.nutritions.fat}
+              </li>
+              <li>
+                <span className="detail-headings">Calories: </span>
+                {fruit.nutritions.calories}
+              </li>
+              <li>
+                <span className="detail-headings">Sugar: </span>
+                {fruit.nutritions.sugar}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
+  </div>
+}
+
+export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
+  const [fruits, setFruits] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  function sortProducts(data) {
+    const sortedFruits = data.sort((a, b) => {
+      if (a[sortBy])
+        return (a[sortBy].toLowerCase() > b[sortBy].toLowerCase()) ? 1 : -1
+      else
+        return (a.nutritions[sortBy] > b.nutritions[sortBy]) ? 1 : -1
+    });
+    setFruits([...sortedFruits])
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    setLoading(true)
+    if (fruits.length > 0) {
+      sortProducts(fruits)
+    }
+    else
+      searchFruit();
+  }, [sortBy])
+
+  useEffect(() => {
+  }, [])
 
   const searchFruit = () => {
-    fetch("https://fruityvice.com/api/fruit/all")
+    fetch(url)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
-        setFruits(data);
+        sortProducts(data)
         check(data);
       });
   };
 
   function check(data) {
     const result = Array.isArray(data);
-
     if (result === true) {
-      console.log(`[${data}] is an array.`);
+      console.log(`${data} is an array.`);
     } else {
       console.log(`${data} is not an array.`);
       let newArray = [].concat(data);
@@ -112,87 +195,33 @@ export default function MultipleFruits() {
     }
   }
 
-  //Render listings for all fruits in array
-  const fruitListings = fruits.map((fruit) => {
-    return (
-      <div className="Listing" key={fruit.id}>
-        <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img
-            src={imageMapping[fruit.name.toLowerCase()]}
-            alt={fruit.name}
-            className="smoothie-images"
-          />
-          <Card.ImgOverlay>
-            <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
-          </Card.ImgOverlay>
-          <Card.Body>
-            <div className="listing-details">
-              <div className="listing-info">
-                <h4>Info</h4>
-                <ul>
-                  <li>
-                    <span className="detail-headings">Genus: </span>
-                    {fruit.genus}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Family: </span>
-                    {fruit.family}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Order: </span>
-                    {fruit.order}
-                  </li>
-                </ul>
-              </div>
-              <div className="listing-nutrition">
-                <h4>Nutrition</h4>
-                <ul>
-                  <li>
-                    <span className="detail-headings">Carbohydrates: </span>
-                    {fruit.nutritions.carbohydrates}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Protein: </span>
-                    {fruit.nutritions.protein}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Fat: </span>
-                    {fruit.nutritions.fat}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Calories: </span>
-                    {fruit.nutritions.calories}
-                  </li>
-                  <li>
-                    <span className="detail-headings">Sugar: </span>
-                    {fruit.nutritions.sugar}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </Card.Body>
-        </Card>
-      </div>
-    );
-  });
-
-  if (setFruits) {
-    return (
-      <div className="MultipleFruits">
-        <div className="section">
-          <Button onClick={searchFruit}>View all fruits</Button>
-
-          <div className="catalogue">{fruitListings}</div>
-        </div>
-      </div>
-    );
-  } else {
+  if (loading)
     return (
       <div className="MultipleFruits">
         <LoadingSpinner />
       </div>
     );
+
+  if (showRandomFruit && fruits.length) {
+    const random = Math.floor(Math.random() * fruits.length);
+    return (
+      <div className="fruit">
+        <RenderFruit fruit={fruits[random]} />
+      </div>
+    );
   }
+
+  return (
+    <div className="MultipleFruits">
+      <div className="section">
+        <div className="catalogue">
+          {fruits.map((fruit) => (
+            <RenderFruit fruit={fruit} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /*
