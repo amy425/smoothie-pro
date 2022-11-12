@@ -52,11 +52,11 @@ export default function Fruits() {
       <hr className="divider" />
 
       <div className="main">
-        <div className="left-main">
+        <div className="left-main deactivated">
           <Dropdowns />
         </div>
         <div className="right-main">
-          <div className="sort-section">
+          <div className="sort-section deactivated">
             <Sort />
           </div>
           <Listing />

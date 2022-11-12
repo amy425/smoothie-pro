@@ -251,7 +251,7 @@ export default function Process() {
             vel tincidunt lectus. Aliquam erat volutpat. Donec pharetra sapien
             commodo volutpat dictum.
           </p>
-          <Button href="/fruits">Let's go</Button>
+          <Button href="/">Let's go</Button>
         </div>
       </div>
       <Footer />

@@ -47,7 +47,7 @@ footer a {
   color: #000;
 }
 
-footer a:hover {
+.footer-top a:hover {
   font-weight: 700;
   color: #000;
 }
@@ -55,6 +55,8 @@ footer a:hover {
 .credit {
   font-size: 10px;
   text-align: right;
+  background-color: rgb(44, 44, 44);
+  padding-bottom: 2px;
 }
 
 .credit a {
@@ -65,12 +67,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.credit {
-  border-top: solid 0.5px #fff;
-}
-
 .footer-logo {
   padding-top: 16px;
+}
+
+.footer-logo img {
+  width: 75px;
 }
 
 .footer-nav a {
@@ -82,10 +84,6 @@ footer a:hover {
   display: flex;
 }
 
-.logo {
-  width: 75px;
-}
-
 /* Project notes banner */
 .project-notes {
   background-color: rgb(124, 88, 124);
@@ -93,7 +91,7 @@ footer a:hover {
   flex-basis: 100%;
   line-height: 18px;
   opacity: 0.95;
-  padding: 5px 0px;
+  padding: 5px 0px 0px;
 }
 
 .project-notes a {
