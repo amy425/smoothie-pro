@@ -3,7 +3,6 @@ import "./Home.css";
 import Navigation from "./Navigation";
 import Search from "./Search";
 import ViewAllFruits from "./ViewAllFruits";
-import ViewRandomFruit from "./ViewRandomFruit";
 import Sort from "./Sort";
 import Dropdowns from "./Dropdowns";
 import SingleFruit from "./SingleFruit";
@@ -50,7 +49,6 @@ export default function Fruits() {
         <Search searchToFruit={searchToFruit} />
         <div className="other-search-options">
           <ViewAllFruits />
-          <ViewRandomFruit />
         </div>
       </div>
       <hr className="divider" />

@@ -3,7 +3,6 @@ import "./Home.css";
 import Navigation from "./Navigation";
 import Search from "./Search";
 import ViewAllFruits from "./ViewAllFruits";
-import ViewRandomFruit from "./ViewRandomFruit";
 import Footer from "./Footer";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
         <Search />
         <div className="other-search-options">
           <ViewAllFruits />
-          <ViewRandomFruit />
         </div>
       </div>
       <Footer />
