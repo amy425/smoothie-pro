@@ -6,7 +6,7 @@ import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
 
 import Card from "react-bootstrap/Card";
-import cherry from "./images/cherry.jpg";
+import cherry from "./images/fruits/cherry.jpg";
 
 export default function SmoothieFruits() {
   const [fruits, setFruits] = useState([]);

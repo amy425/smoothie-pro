@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import "./Listing.css";
-import cherry from "./images/cherry.jpg";
+import cherry from "./images/fruits/cherry.jpg";
 
 export default function Listing() {
   <div className="Listing">
