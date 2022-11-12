@@ -1,6 +1,8 @@
 import React from "react";
-import apricot from "./images/apricot.jpg";
-/*import banana from "./images/banana.jpg";
+//import apricot from "./images/apricot.jpg";
+import banana from "./images/banana.jpg";
+
+/*
 import blackberry from "./images/blackberry.jpg";
 import cherry from "./images/cherry.jpg";
 import durian from "./images/durian.jpg";
@@ -15,11 +17,16 @@ import watermelon from "./images/watermelon.jpg";
 import "./FruitImage.css";*/
 
 export default function FruitImage(props) {
-  //let image = props.fruit.toLowerCase();
+  let fruitName = props.name.toLowerCase();
+  console.log(fruitName);
+
+  const imageMapping = {
+    banana: { banana },
+  };
 
   return (
     <div className="FruitImage">
-      <img src={apricot} alt={props.name} />
+      <img src={imageMapping[fruitName]} alt={fruitName} />
     </div>
   );
 }

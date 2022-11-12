@@ -11,6 +11,5 @@ export default function Listing() {
         <Card.Title className="listing-title">Cherry</Card.Title>
       </Card.ImgOverlay>
     </Card>
-    ;
   </div>;
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import About from "./About.js";
 import Home from "./Home.js";
-import Fruits from "./Fruits.js";
 import Menu from "./Menu.js";
 import Process from "./Process.js";
 import Smoothies from "./Smoothies.js";
@@ -14,7 +13,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/fruits" element={<Fruits />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/process" element={<Process />} />
           <Route path="/smoothies" element={<Smoothies />} />

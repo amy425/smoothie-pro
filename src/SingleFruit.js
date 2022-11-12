@@ -2,9 +2,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
-
 import Card from "react-bootstrap/Card";
 import cherry from "./images/cherry.jpg";
+import NoResults from "./NoResults";
 
 export default function SingleFruit(props) {
   const [singleFruitSearch, setSingleFruitSearch] = useState("");
@@ -81,6 +81,13 @@ export default function SingleFruit(props) {
     return (
       <div className="SingleFruit">
         <div className="catalogue">{singleFruitSearch}</div>
+      </div>
+    );
+  }
+  if (fruitListing === null) {
+    return (
+      <div className="SingleFruit">
+        <NoResults />
       </div>
     );
   } else {
