@@ -3,6 +3,7 @@ import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
 import Card from "react-bootstrap/Card";
+import SingleFruit from "./SingleFruit";
 
 import apple from "./images/fruits/apple.jpg";
 import apricot from "./images/fruits/apricot.jpg";
@@ -144,7 +145,12 @@ function RenderFruit({ fruit }) {
   );
 }
 
-export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
+export default function MultipleFruits({
+  singleFruitUrl,
+  showRandomFruit,
+  url,
+  sortBy,
+}) {
   const [fruits, setFruits] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -201,6 +207,7 @@ export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
         <LoadingSpinner />
       </div>
     );
+  if (singleFruitUrl) return <SingleFruit url={singleFruitUrl} />;
 
   if (showRandomFruit && fruits.length) {
     const random = Math.floor(Math.random() * fruits.length);

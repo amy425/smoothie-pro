@@ -5,13 +5,13 @@ import MultipleFruits from "./MultipleFruits";
 import Dropdowns from "./Dropdowns";
 import Sort from "./Sort";
 import Listing from "./Listing";
-import SingleFruit from "./SingleFruit";
 
-export default function ViewAllFruits({ singleFruitUrl, url }) {
+export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
   const [showFruit, setShowFruits] = useState(false);
-  const [sortBy, setSortBy] = useState('Name');
+  const [sortBy, setSortBy] = useState("Name");
 
   function allFruits() {
+    searchToFruit("");
     setShowFruits(true);
     setShowRandomFruit(0);
   }
@@ -19,6 +19,7 @@ export default function ViewAllFruits({ singleFruitUrl, url }) {
 
   function randomUrl() {
     setShowRandomFruit(showRandomFruit + 1);
+    searchToFruit("");
     setShowFruits(false);
   }
 
@@ -33,14 +34,18 @@ export default function ViewAllFruits({ singleFruitUrl, url }) {
           <Dropdowns />
         </div>
         {(showFruit || showRandomFruit > 0) && (
-          <MultipleFruits showRandomFruit={showRandomFruit} url={url} sortBy={sortBy.toLowerCase()} />
+          <MultipleFruits
+            showRandomFruit={showRandomFruit}
+            url={url}
+            singleFruitUrl={singleFruitUrl}
+            sortBy={sortBy.toLowerCase()}
+          />
         )}
         <div className="right-main">
           <div className="sort-section">
             <Sort sortBy={sortBy} setSortBy={setSortBy} />
           </div>
           <Listing />
-          <SingleFruit url={singleFruitUrl} />
         </div>
       </div>
     </div>

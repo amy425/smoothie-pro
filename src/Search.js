@@ -8,6 +8,7 @@ export default function Search({ searchToFruit }) {
     event.preventDefault();
     if (singleFruit === "") {
       alert(`Please enter the name of a fruit!`);
+      searchToFruit("");
     } else {
       console.log(singleFruit);
       searchToFruit(singleFruit);

@@ -14,8 +14,9 @@ export default function Fruits() {
     setSearchData(searchData);
   };
 
-  let singleFruit = `${searchData}`;
-  let singleFruitUrl = `https://fruityvice.com/api/fruit/${singleFruit}`;
+  let singleFruitUrl = searchData
+    ? `https://fruityvice.com/api/fruit/${searchData}`
+    : null;
 
   /*
   const allToFruit = (allData) => {
@@ -41,6 +42,7 @@ export default function Fruits() {
         <Search searchToFruit={searchToFruit} />
         <div className="other-search-options">
           <ViewAllFruits
+            searchToFruit={searchToFruit}
             singleFruitUrl={singleFruitUrl}
             url={multipleFruitsUrl}
           />
