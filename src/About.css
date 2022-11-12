@@ -15,7 +15,7 @@ h1 {
   text-decoration: none;
 }
 
-.About img {
+.About .photo img {
   width: 500px;
   height: 350px;
 }
