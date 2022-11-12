@@ -91,6 +91,7 @@ export default function SingleFruit(props) {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         setSingleFruitSearch(fruitListing(data));
       });
   });

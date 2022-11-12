@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./MultipleFruits.css";
-import { useState } from "react";
 import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
 import Card from "react-bootstrap/Card";
@@ -40,7 +39,6 @@ import tomato from "./images/fruits/tomato.jpg";
 import watermelon from "./images/fruits/watermelon.jpg";
 import none from "./images/fruits/none.jpg";
 
-
 const imageMapping = {
   apple,
   apricot,
@@ -56,92 +54,94 @@ const imageMapping = {
   gooseberry,
   greenapple,
   grape,
-  grapes: grapes,
+  grapes,
   guava: none,
   kiwi: none,
   kiwifruit: none,
-  lemon: lemon,
-  lime: lime,
-  lingonberry: lingonberry,
-  lychee: lychee,
+  lemon,
+  lime,
+  lingonberry,
+  lychee,
   mango: none,
-  melon: melon,
+  melon,
   morus: none,
-  orange: orange,
+  orange,
   papaya: papaya,
-  passionfruit: passionfruit,
-  pear: pear,
-  persimmon: persimmon,
+  passionfruit,
+  pear,
+  persimmon,
   pineapple: none,
-  pitahaya: pitahaya,
-  plum: plum,
-  pomegranate: pomegranate,
-  raspberry: raspberry,
-  strawberry: strawberry,
-  tangerine: tangerine,
-  tomato: tomato,
-  watermelon: watermelon,
+  pitahaya,
+  plum,
+  pomegranate,
+  raspberry,
+  strawberry,
+  tangerine,
+  tomato,
+  watermelon,
 };
 
 function RenderFruit({ fruit }) {
-  return <div className="Listing" key={fruit.id}>
-    <Card className="bg-dark text-white smoothie-listing">
-      <Card.Img
-        src={imageMapping[fruit.name.toLowerCase()]}
-        alt={fruit.name}
-        className="smoothie-images"
-      />
-      <Card.ImgOverlay>
-        <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
-      </Card.ImgOverlay>
-      <Card.Body>
-        <div className="listing-details">
-          <div className="listing-info">
-            <h4>Info</h4>
-            <ul>
-              <li>
-                <span className="detail-headings">Genus: </span>
-                {fruit.genus}
-              </li>
-              <li>
-                <span className="detail-headings">Family: </span>
-                {fruit.family}
-              </li>
-              <li>
-                <span className="detail-headings">Order: </span>
-                {fruit.order}
-              </li>
-            </ul>
+  return (
+    <div className="Listing" key={fruit.id}>
+      <Card className="bg-dark text-white smoothie-listing">
+        <Card.Img
+          src={imageMapping[fruit.name.toLowerCase()]}
+          alt={fruit.name}
+          className="smoothie-images"
+        />
+        <Card.ImgOverlay>
+          <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
+        </Card.ImgOverlay>
+        <Card.Body>
+          <div className="listing-details">
+            <div className="listing-info">
+              <h4>Info</h4>
+              <ul>
+                <li>
+                  <span className="detail-headings">Genus: </span>
+                  {fruit.genus}
+                </li>
+                <li>
+                  <span className="detail-headings">Family: </span>
+                  {fruit.family}
+                </li>
+                <li>
+                  <span className="detail-headings">Order: </span>
+                  {fruit.order}
+                </li>
+              </ul>
+            </div>
+            <div className="listing-nutrition">
+              <h4>Nutrition</h4>
+              <ul>
+                <li>
+                  <span className="detail-headings">Carbohydrates: </span>
+                  {fruit.nutritions.carbohydrates}
+                </li>
+                <li>
+                  <span className="detail-headings">Protein: </span>
+                  {fruit.nutritions.protein}
+                </li>
+                <li>
+                  <span className="detail-headings">Fat: </span>
+                  {fruit.nutritions.fat}
+                </li>
+                <li>
+                  <span className="detail-headings">Calories: </span>
+                  {fruit.nutritions.calories}
+                </li>
+                <li>
+                  <span className="detail-headings">Sugar: </span>
+                  {fruit.nutritions.sugar}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="listing-nutrition">
-            <h4>Nutrition</h4>
-            <ul>
-              <li>
-                <span className="detail-headings">Carbohydrates: </span>
-                {fruit.nutritions.carbohydrates}
-              </li>
-              <li>
-                <span className="detail-headings">Protein: </span>
-                {fruit.nutritions.protein}
-              </li>
-              <li>
-                <span className="detail-headings">Fat: </span>
-                {fruit.nutritions.fat}
-              </li>
-              <li>
-                <span className="detail-headings">Calories: </span>
-                {fruit.nutritions.calories}
-              </li>
-              <li>
-                <span className="detail-headings">Sugar: </span>
-                {fruit.nutritions.sugar}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </Card.Body>
-    </Card>
-  </div>
+        </Card.Body>
+      </Card>
+    </div>
+  );
 }
 
 export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
@@ -151,25 +151,25 @@ export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
   function sortProducts(data) {
     const sortedFruits = data.sort((a, b) => {
       if (a[sortBy])
-        return (a[sortBy].toLowerCase() > b[sortBy].toLowerCase()) ? 1 : -1
-      else
-        return (a.nutritions[sortBy] > b.nutritions[sortBy]) ? 1 : -1
+        return a[sortBy].toLowerCase() > b[sortBy].toLowerCase() ? 1 : -1;
+      else return a.nutritions[sortBy] > b.nutritions[sortBy] ? 1 : -1;
     });
-    setFruits([...sortedFruits])
-    setLoading(false)
+    setFruits([...sortedFruits]);
+    setLoading(false);
   }
-
-  useEffect(() => {
-    setLoading(true)
+  const setData = useCallback(() => {
+    setLoading(true);
     if (fruits.length > 0) {
-      sortProducts(fruits)
-    }
-    else
-      searchFruit();
-  }, [sortBy])
+      sortProducts(fruits);
+    } else searchFruit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sortBy]);
 
   useEffect(() => {
-  }, [])
+    setData();
+  }, [sortBy, setData]);
+
+  useEffect(() => {}, []);
 
   const searchFruit = () => {
     fetch(url)
@@ -177,7 +177,7 @@ export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
         return response.json();
       })
       .then((data) => {
-        sortProducts(data)
+        sortProducts(data);
         check(data);
       });
   };
@@ -216,7 +216,7 @@ export default function MultipleFruits({ showRandomFruit, url, sortBy }) {
       <div className="section">
         <div className="catalogue">
           {fruits.map((fruit) => (
-            <RenderFruit fruit={fruit} />
+            <RenderFruit key={fruit.id} fruit={fruit} />
           ))}
         </div>
       </div>
