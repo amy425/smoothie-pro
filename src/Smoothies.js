@@ -1,10 +1,9 @@
 import React from "react";
 //import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
-import durian from "./images/durian.jpg";
-
-import grape from "./images/grape.jpg";
-import fig from "./images/fig.jpg";
+import durian from "./images/fruits/durian.jpg";
+import grape from "./images/fruits/grape.jpg";
+import fig from "./images/fruits/fig.jpg";
 import smoothie from "./images/smoothies/smoothie.jpg";
 import "./Smoothies.css";
 import Navigation from "./Navigation";

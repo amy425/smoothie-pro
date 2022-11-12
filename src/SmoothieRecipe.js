@@ -1,9 +1,9 @@
 import React from "react";
 import "./SmoothieRecipe.css";
 import smoothie from "./images/smoothies/smoothie.jpg";
-import strawberry from "./images/strawberry.jpg";
-import banana from "./images/banana.jpg";
-import tangerine from "./images/tangerine.jpg";
+import strawberry from "./images/fruits/strawberry.jpg";
+import banana from "./images/fruits/banana.jpg";
+import tangerine from "./images/fruits/tangerine.jpg";
 
 import Card from "react-bootstrap/Card";
 

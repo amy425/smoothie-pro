@@ -5,10 +5,10 @@ import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
 //import Smoothies from "./Smoothies";
 import Footer from "./Footer";
-import pineapple from "./pineapple.png";
-import orange from "./orange.png";
-import strawberry from "./strawberry.png";
-import mango2 from "./mango2.png";
+import pineapple from "./images/animation/pineapple.png";
+import orange from "./images/animation/orange.png";
+import strawberry from "./images/animation/strawberry.png";
+import mango2 from "./images/animation/mango2.png";
 import SmoothieRecipe from "./SmoothieRecipe";
 import SmoothieFruits from "./SmoothieFruits";
 
