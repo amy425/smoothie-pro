@@ -4,7 +4,6 @@ import "./Menu.css";
 import Navigation from "./Navigation";
 import Button from "react-bootstrap/esm/Button";
 //import Smoothies from "./Smoothies";
-import FruitImage from "./FruitImage";
 import Footer from "./Footer";
 import pineapple from "./pineapple.png";
 import orange from "./orange.png";
@@ -25,9 +24,7 @@ export default function Menu() {
       return (
         <div className="listing-card" key={index}>
           <h3>{ingredient}</h3>
-          <div className="listing-image">
-            <FruitImage />
-          </div>
+          <div className="listing-image"></div>
           <div className="listing-details">
             <div className="listing-info">
               <h4>Info</h4>

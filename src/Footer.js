@@ -67,11 +67,11 @@ export default function Footer() {
               <h4>Explore</h4>
               <a href="/about">About</a>
               <br></br>
-              <a href="/fruits">Fruits</a>
-              <br></br>
               <a href="/menu">Menu</a>
               <br></br>
               <a href="/process">Process</a>
+              <br></br>
+              <a href="/smoothies">Smoothies</a>
             </div>
           </div>
         </div>

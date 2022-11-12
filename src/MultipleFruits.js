@@ -4,13 +4,40 @@ import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
-//import FruitImage from "./FruitImage";
-
 import Card from "react-bootstrap/Card";
+
+import apricot from "./images/apricot.jpg";
+import banana from "./images/banana.jpg";
+import blackberry from "./images/blackberry.jpg";
 import cherry from "./images/cherry.jpg";
+import durian from "./images/durian.jpg";
+import fig from "./images/fig.jpg";
+import grape from "./images/grape.jpg";
+import lemon from "./images/lemon.jpg";
+import orange from "./images/orange.jpg";
+import raspberry from "./images/raspberry.jpg";
+import strawberry from "./images/strawberry.jpg";
+import tangerine from "./images/tangerine.jpg";
+import watermelon from "./images/watermelon.jpg";
 
 export default function MultipleFruits() {
   const [fruits, setFruits] = useState([]);
+
+  const imageMapping = {
+    apricot: apricot,
+    banana: banana,
+    blackberry: blackberry,
+    cherry: cherry,
+    durian: durian,
+    fig: fig,
+    grape: grape,
+    lemon: lemon,
+    orange: orange,
+    raspberry: raspberry,
+    strawberry: strawberry,
+    tangerine: tangerine,
+    watermelon: watermelon,
+  };
 
   const searchFruit = () => {
     fetch("https://fruityvice.com/api/fruit/all")
@@ -43,7 +70,11 @@ export default function MultipleFruits() {
     return (
       <div className="Listing" key={fruit.id}>
         <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img src={cherry} alt="cherry" className="smoothie-images" />
+          <Card.Img
+            src={imageMapping[fruit.name.toLowerCase()]}
+            alt={fruit.name}
+            className="smoothie-images"
+          />
           <Card.ImgOverlay>
             <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
           </Card.ImgOverlay>

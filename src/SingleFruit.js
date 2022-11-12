@@ -3,11 +3,40 @@ import { useState, useEffect } from "react";
 import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
 import Card from "react-bootstrap/Card";
-import cherry from "./images/cherry.jpg";
 import NoResults from "./NoResults";
+
+import apricot from "./images/apricot.jpg";
+import banana from "./images/banana.jpg";
+import blackberry from "./images/blackberry.jpg";
+import cherry from "./images/cherry.jpg";
+import durian from "./images/durian.jpg";
+import fig from "./images/fig.jpg";
+import grape from "./images/grape.jpg";
+import lemon from "./images/lemon.jpg";
+import orange from "./images/orange.jpg";
+import raspberry from "./images/raspberry.jpg";
+import strawberry from "./images/strawberry.jpg";
+import tangerine from "./images/tangerine.jpg";
+import watermelon from "./images/watermelon.jpg";
 
 export default function SingleFruit(props) {
   const [singleFruitSearch, setSingleFruitSearch] = useState("");
+
+  const imageMapping = {
+    apricot: apricot,
+    banana: banana,
+    blackberry: blackberry,
+    cherry: cherry,
+    durian: durian,
+    fig: fig,
+    grape: grape,
+    lemon: lemon,
+    orange: orange,
+    raspberry: raspberry,
+    strawberry: strawberry,
+    tangerine: tangerine,
+    watermelon: watermelon,
+  };
 
   useEffect(() => {
     fetch(`${props.url}`)
@@ -23,7 +52,11 @@ export default function SingleFruit(props) {
     return (
       <div className="Listing">
         <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img src={cherry} alt="cherry" className="smoothie-images" />
+          <Card.Img
+            src={imageMapping[data.name.toLowerCase()]}
+            alt={data.name}
+            className="smoothie-images"
+          />
           <Card.ImgOverlay>
             <Card.Title className="smoothie-title">{data.name}</Card.Title>
           </Card.ImgOverlay>
