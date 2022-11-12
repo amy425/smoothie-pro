@@ -9,8 +9,6 @@ import SingleFruit from "./SingleFruit";
 import MultipleFruits from "./MultipleFruits";
 import Footer from "./Footer";
 
-import Listing from "./Listing";
-
 export default function Fruits() {
   const [searchData, setSearchData] = useState("");
   //const [familyData, setFamilyData] = useState("");
@@ -59,7 +57,6 @@ export default function Fruits() {
           <div className="sort-section deactivated">
             <Sort />
           </div>
-          <Listing />
           <SingleFruit url={singleFruitUrl} />
           <MultipleFruits url={multipleFruitsUrl} />
         </div>
