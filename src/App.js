@@ -4,7 +4,6 @@ import Home from "./Home.js";
 import About from "./About.js";
 import Menu from "./Menu.js";
 import Process from "./Process.js";
-import Smoothies from "./Smoothies.js";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/process" element={<Process />} />
-          <Route path="/smoothies" element={<Smoothies />} />
         </Routes>
       </div>
     </BrowserRouter>

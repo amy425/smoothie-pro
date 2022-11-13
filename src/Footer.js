@@ -68,10 +68,6 @@ export default function Footer() {
               <a href="/about">About</a>
               <br></br>
               <a href="/menu">Menu</a>
-              <br></br>
-              <a href="/process">Process</a>
-              <br></br>
-              <a href="/smoothies">Smoothies</a>
             </div>
           </div>
         </div>
