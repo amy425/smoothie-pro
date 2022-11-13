@@ -10,7 +10,6 @@ export default function Search({ searchToFruit }) {
       alert(`Please enter the name of a fruit!`);
       searchToFruit("");
     } else {
-      console.log(singleFruit);
       searchToFruit(singleFruit);
     }
   }

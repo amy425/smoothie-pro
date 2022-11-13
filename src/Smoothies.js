@@ -1,10 +1,6 @@
 import React from "react";
 //import React, { useState } from "react";
-import Card from "react-bootstrap/Card";
-import durian from "./images/fruits/durian.jpg";
-import grape from "./images/fruits/grape.jpg";
-import fig from "./images/fruits/fig.jpg";
-import smoothie from "./images/smoothies/smoothie.jpg";
+//import Card from "react-bootstrap/Card";
 import "./Smoothies.css";
 import Navigation from "./Navigation";
 //import SmoothieRecipe from "./SmoothieRecipe";
@@ -56,50 +52,6 @@ export default function Smoothies() {
   return (
     <div className="Smoothies">
       <Navigation />
-      <div className="smoothie-section">
-        <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img
-            src={smoothie}
-            alt="Tropical twist smoothie"
-            className="smoothie-images"
-          />
-          <Card.ImgOverlay>
-            <Card.Title className="smoothie-title">Tropical Twist</Card.Title>
-          </Card.ImgOverlay>
-        </Card>
-        <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img
-            src={durian}
-            alt="Tropical twist smoothie"
-            className="smoothie-images"
-          />
-          <Card.ImgOverlay>
-            <Card.Title className="smoothie-title">
-              Strawberry Splash
-            </Card.Title>
-          </Card.ImgOverlay>
-        </Card>
-        <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img
-            src={fig}
-            alt="Tropical twist smoothie"
-            className="smoothie-images"
-          />
-          <Card.ImgOverlay>
-            <Card.Title className="smoothie-title">Energizer</Card.Title>
-          </Card.ImgOverlay>
-        </Card>
-        <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img
-            src={grape}
-            alt="Tropical twist smoothie"
-            className="smoothie-images"
-          />
-          <Card.ImgOverlay>
-            <Card.Title className="smoothie-title">Berry Blast</Card.Title>
-          </Card.ImgOverlay>
-        </Card>
-      </div>
     </div>
   );
 }

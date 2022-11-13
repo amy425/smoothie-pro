@@ -35,7 +35,7 @@ export default function Fruits() {
 */
 
   return (
-    <div className="Fruits">
+    <div className="Home">
       <Navigation />
       <div className="container-fluid">
         <h1>Smoothie Pro</h1>

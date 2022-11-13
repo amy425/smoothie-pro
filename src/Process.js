@@ -254,6 +254,7 @@ export default function Process() {
           <Button href="/">Let's go</Button>
         </div>
       </div>
+      <hr className="divider" />
       <Footer />
     </div>
   );

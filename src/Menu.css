@@ -19,3 +19,7 @@
   color: rgb(124, 88, 124);
   font-size: 1.5rem;
 }
+
+.divider {
+  margin-bottom: 0;
+}

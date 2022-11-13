@@ -9,7 +9,7 @@ export default function UpdatedDropdown() {
   return (
     <div className="dropdowns">
       <p>Filter by:</p>
-      <Accordion defaultActiveKey={["0"]} alwaysOpen flush className="">
+      <Accordion defaultActiveKey={["0"]} flush className="">
         <Accordion.Item eventKey="0" className="">
           <Accordion.Header>FAMILY</Accordion.Header>
           <Accordion.Body>

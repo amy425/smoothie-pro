@@ -105,6 +105,7 @@ export default function Menu() {
       <div className="section">
         <SmoothieRecipe />
       </div>
+      <hr className="divider" />
       <Footer />
     </div>
   );

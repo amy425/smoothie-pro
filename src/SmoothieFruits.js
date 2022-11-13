@@ -19,23 +19,8 @@ export default function SmoothieFruits() {
       .then((data) => {
         console.log(data);
         setFruits(data);
-        check(data);
       });
   };
-
-  function check(data) {
-    const result = Array.isArray(data);
-
-    if (result === true) {
-      console.log(`[${data}] is an array.`);
-    } else {
-      console.log(`${data} is not an array.`);
-      let newArray = [].concat(data);
-      console.log(newArray);
-      console.log(newArray[0].id);
-      console.log(newArray[0].family);
-    }
-  }
 
   //Render listings for all fruits in array
   const fruitListings = fruits.map((fruit) => {
