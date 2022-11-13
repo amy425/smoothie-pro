@@ -7,8 +7,6 @@ import Footer from "./Footer";
 
 export default function Fruits() {
   const [searchData, setSearchData] = useState("");
-  //const [familyData, setFamilyData] = useState("");
-  //const [allData, setAllData] = useState("");
 
   const searchToFruit = (searchData) => {
     setSearchData(searchData);
@@ -18,21 +16,7 @@ export default function Fruits() {
     ? `https://fruityvice.com/api/fruit/${searchData}`
     : null;
 
-  /*
-  const allToFruit = (allData) => {
-    setAllData(allData);
-  };*/
-
   let multipleFruitsUrl = `https://fruityvice.com/api/fruit/all`;
-
-  /*
-  const familyToFruit = (familyData) => {
-    setFamilyData(familyData);
-  };
-
-  let familyFruit = `${familyData}`;
-  let familyFruitUrl = `https://fruityvice.com/api/fruit/family/${familyFruit}`;
-*/
 
   return (
     <div className="Home">

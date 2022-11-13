@@ -2,7 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import MultipleFruits from "./MultipleFruits";
-import Dropdowns from "./Dropdowns";
 import Sort from "./Sort";
 import "./Dropdowns.css";
 
@@ -34,9 +33,6 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
           <Sort sortBy={sortBy} setSortBy={setSortBy} />
         </div>
         <div className="main">
-          <div className="left-main">
-            <Dropdowns />
-          </div>
           {(showFruit || showRandomFruit > 0) && (
             <MultipleFruits
               showRandomFruit={showRandomFruit}
