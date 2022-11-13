@@ -8,11 +8,13 @@ import "./Dropdowns.css";
 export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
   const [showFruit, setShowFruits] = useState(false);
   const [sortBy, setSortBy] = useState("Name");
+  const [active, setActive] = useState("");
 
   function allFruits() {
     searchToFruit("");
     setShowFruits(true);
     setShowRandomFruit(0);
+    setActive("");
   }
   const [showRandomFruit, setShowRandomFruit] = useState(0);
 
@@ -20,6 +22,7 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
     setShowRandomFruit(showRandomFruit + 1);
     searchToFruit("");
     setShowFruits(false);
+    setActive("deactivated");
   }
 
   return (
@@ -29,7 +32,7 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
         <Button onClick={randomUrl}>Random fruit</Button>
       </div>
       <div className="fruit-display">
-        <div className="sort-section">
+        <div className={"sort-section " + active}>
           <Sort sortBy={sortBy} setSortBy={setSortBy} />
         </div>
         <div className="main">
