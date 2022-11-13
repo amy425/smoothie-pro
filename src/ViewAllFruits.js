@@ -29,22 +29,22 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
         <Button onClick={allFruits}>View all fruits</Button>
         <Button onClick={randomUrl}>Random fruit</Button>
       </div>
-      <div className="main">
-        <div className="left-main">
-          <Dropdowns />
+      <div className="fruit-display">
+        <div className="sort-section">
+          <Sort sortBy={sortBy} setSortBy={setSortBy} />
         </div>
-        {(showFruit || showRandomFruit > 0) && (
-          <MultipleFruits
-            showRandomFruit={showRandomFruit}
-            url={url}
-            singleFruitUrl={singleFruitUrl}
-            sortBy={sortBy.toLowerCase()}
-          />
-        )}
-        <div className="right-main">
-          <div className="sort-section">
-            <Sort sortBy={sortBy} setSortBy={setSortBy} />
+        <div className="main">
+          <div className="left-main">
+            <Dropdowns />
           </div>
+          {(showFruit || showRandomFruit > 0) && (
+            <MultipleFruits
+              showRandomFruit={showRandomFruit}
+              url={url}
+              singleFruitUrl={singleFruitUrl}
+              sortBy={sortBy.toLowerCase()}
+            />
+          )}
         </div>
       </div>
     </div>

@@ -1,49 +1,14 @@
-.filter-section {
-  width: 300px;
-}
-
-.sort-dropdown {
-  margin: 10px;
-}
-
-.sort-dropdown button {
-  border-radius: 10px;
-}
-
-.sort-section {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* UPDATED DROPDOWN */
-
-.deactivated {
-  opacity: 0.8;
-  pointer-events: none;
-}
-
-.dropdowns {
-  background-color: #fff;
-  padding: 20px 0px 10px;
-  text-align: left;
-  border-radius: 10px;
-}
-
-.dropdowns p {
-  padding-left: 20px;
-}
-
 .accordion {
   --bs-accordion-active-color: #fff;
   --bs-accordion-active-bg: rgb(124, 88, 124);
 }
 
-.accordion-body input {
-  margin-right: 15px;
-}
-
 .accordion-body {
   border-radius: 10px;
+}
+
+.accordion-body input {
+  margin-right: 15px;
 }
 
 .accordion-button {
@@ -62,6 +27,48 @@
   color: #fff;
 }
 
-div.ViewAllFruits {
-  padding-bottom: 20px;
+.deactivated {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.dropdowns {
+  background-color: #fff;
+  padding: 20px 0px 10px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.dropdowns p {
+  padding-left: 20px;
+}
+
+.ViewAllFruits {
+  padding-bottom: 40px;
+}
+
+.filter-section {
+  min-width: 200px;
+}
+
+.fruit-display {
+  margin: 10px 60px;
+}
+
+.left-main {
+  margin-top: 10px;
+}
+
+.sort-dropdown {
+  margin-right: 60px;
+}
+
+.sort-dropdown button {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.sort-section {
+  display: flex;
+  justify-content: flex-end;
 }
