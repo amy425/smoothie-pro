@@ -27,6 +27,13 @@
   color: #fff;
 }
 
+.catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 1000px;
+}
+
 .deactivated {
   opacity: 0.8;
   pointer-events: none;

@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
-import "./Smoothies.css";
 import Card from "react-bootstrap/Card";
 import SingleFruit from "./SingleFruit";
 
@@ -198,7 +197,7 @@ export default function MultipleFruits({
   if (showRandomFruit && fruits.length) {
     const random = Math.floor(Math.random() * fruits.length);
     return (
-      <div className="fruit">
+      <div className="fruit catalogue">
         <RenderFruit fruit={fruits[random]} />
       </div>
     );
