@@ -189,7 +189,9 @@ export default function MultipleFruits({
   if (loading)
     return (
       <div className="MultipleFruits">
-        <LoadingSpinner />
+        <div className="catalogue">
+          <LoadingSpinner />
+        </div>
       </div>
     );
   if (singleFruitUrl) return <SingleFruit url={singleFruitUrl} />;
@@ -197,8 +199,10 @@ export default function MultipleFruits({
   if (showRandomFruit && fruits.length) {
     const random = Math.floor(Math.random() * fruits.length);
     return (
-      <div className="fruit catalogue">
-        <RenderFruit fruit={fruits[random]} />
+      <div className="fruit">
+        <div className="catalogue">
+          <RenderFruit fruit={fruits[random]} />
+        </div>
       </div>
     );
   }
