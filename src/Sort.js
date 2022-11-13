@@ -15,6 +15,7 @@ export default function Sort({ setSortBy, sortBy }) {
         >
           <Dropdown.Item eventKey="Name">Name A - Z</Dropdown.Item>
           <Dropdown.Item eventKey="Family">Family (A - Z)</Dropdown.Item>
+          <Dropdown.Item eventKey="Genus">Genus (A - Z)</Dropdown.Item>
           <Dropdown.Item eventKey="Order">Order (A - Z)</Dropdown.Item>
           <Dropdown.Item eventKey="Carbohydrates">
             Carbs (Low-High)
