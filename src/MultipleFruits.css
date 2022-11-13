@@ -4,9 +4,7 @@
 }
 
 .catalogue {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  min-width: 1000px;
 }
 
 .listing-card {
@@ -16,52 +14,24 @@
   opacity: 0.95;
   padding: 10px;
   width: 340px;
+  -webkit-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
+  -moz-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
 }
 
 .listing-card:hover {
   opacity: 1;
 }
 
-.listing-info h4,
-.listing-nutrition h4 {
-  font-size: 17px;
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.listing-info li,
-.listing-nutrition li {
-  font-size: 13px !important;
-}
-
-.listing-image img {
-  width: 300px;
-  height: 300px;
+.listing-details {
+  border: 2px solid rgb(124, 88, 124);
+  display: flex;
   margin: 10px;
+  text-align: left;
 }
 
 .listing-details .detail-headings {
   font-weight: 800;
-}
-
-.listing-info ul,
-.listing-nutrition ul {
-  padding-left: 0px;
-  list-style: none;
-}
-
-.listing-card {
-  -webkit-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
-  box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.06);
-}
-
-.listing-details {
-  border: 2px solid rgb(124, 88, 124);
-  margin: 10px;
-  display: flex;
-  text-align: left;
 }
 
 .listing-info,
@@ -70,35 +40,27 @@
   padding: 10px;
 }
 
-/*NEW*/
+.listing-info h4,
+.listing-nutrition h4 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
 
-.smoothie-images {
-  width: 300px;
+.listing-info ul,
+.listing-nutrition ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.listing-info li,
+.listing-nutrition li {
+  font-size: 13px !important;
+}
+
+.listing-image img {
   height: 300px;
-  border-radius: 0;
-}
-
-.smoothie-images:hover {
-  width: 300px;
-  border-radius: 0;
-}
-
-.smoothie-listing {
-  width: 300px;
-  border-radius: 0;
-  border-width: 0px;
-  opacity: 0.95;
   margin: 10px;
-}
-
-.smoothie-listing:hover {
-  opacity: 1;
-}
-
-.smoothie-title {
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-align: left;
-  padding: 10px;
-  opacity: 1 !important;
+  width: 300px;
 }
