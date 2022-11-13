@@ -38,9 +38,14 @@ import strawberry from "./images/fruits/strawberry.jpg";
 import tangerine from "./images/fruits/tangerine.jpg";
 import tomato from "./images/fruits/tomato.jpg";
 import watermelon from "./images/fruits/watermelon.jpg";
-import none from "./images/fruits/none.jpg";
+import kiwi from "./images/fruits/kiwi.jpg";
+import kiwifruit from "./images/fruits/kiwifruit.jpg";
+import guava from "./images/fruits/guava.jpg";
+import mango from "./images/fruits/mango.jpg";
+import morus from "./images/fruits/morus.jpeg";
+import pineapple from "./images/fruits/pineapple.jpg";
 
-const imageMapping = {
+export const imageMapping = {
   apple,
   apricot,
   avocado,
@@ -56,22 +61,22 @@ const imageMapping = {
   greenapple,
   grape,
   grapes,
-  guava: none,
-  kiwi: none,
-  kiwifruit: none,
+  guava,
+  kiwi,
+  kiwifruit,
   lemon,
   lime,
   lingonberry,
   lychee,
-  mango: none,
+  mango,
   melon,
-  morus: none,
+  morus,
   orange,
-  papaya: papaya,
+  papaya,
   passionfruit,
   pear,
   persimmon,
-  pineapple: none,
+  pineapple,
   pitahaya,
   plum,
   pomegranate,
