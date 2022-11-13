@@ -4,7 +4,6 @@ import "./MultipleFruits.css";
 import LoadingSpinner from "./LoadingSpinner";
 import Card from "react-bootstrap/Card";
 import NoResults from "./NoResults";
-
 import apple from "./images/fruits/apple.jpg";
 import apricot from "./images/fruits/apricot.jpg";
 import avocado from "./images/fruits/avocado.jpg";
@@ -38,7 +37,12 @@ import strawberry from "./images/fruits/strawberry.jpg";
 import tangerine from "./images/fruits/tangerine.jpg";
 import tomato from "./images/fruits/tomato.jpg";
 import watermelon from "./images/fruits/watermelon.jpg";
-import none from "./images/fruits/none.jpg";
+import kiwi from "./images/fruits/kiwi.jpg";
+import kiwifruit from "./images/fruits/kiwifruit.jpg";
+import guava from "./images/fruits/guava.jpg";
+import mango from "./images/fruits/mango.jpg";
+import morus from "./images/fruits/morus.jpeg";
+import pineapple from "./images/fruits/pineapple.jpg";
 
 const imageMapping = {
   apple,
@@ -56,22 +60,22 @@ const imageMapping = {
   greenapple,
   grape,
   grapes,
-  guava: none,
-  kiwi: none,
-  kiwifruit: none,
+  guava,
+  kiwi,
+  kiwifruit,
   lemon,
   lime,
   lingonberry,
   lychee,
-  mango: none,
+  mango,
   melon,
-  morus: none,
+  morus,
   orange,
-  papaya: papaya,
+  papaya,
   passionfruit,
   pear,
   persimmon,
-  pineapple: none,
+  pineapple,
   pitahaya,
   plum,
   pomegranate,
