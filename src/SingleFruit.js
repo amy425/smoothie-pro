@@ -40,47 +40,46 @@ import tomato from "./images/fruits/tomato.jpg";
 import watermelon from "./images/fruits/watermelon.jpg";
 import none from "./images/fruits/none.jpg";
 
-
 const imageMapping = {
-  apple: apple,
-  apricot: apricot,
-  avocado: avocado,
-  banana: banana,
-  blackberry: blackberry,
-  blueberry: blueberry,
-  cherry: cherry,
-  dragonfruit: dragonfruit,
-  durian: durian,
-  feijoa: feijoa,
-  fig: fig,
-  gooseberry: gooseberry,
-  greenapple: greenapple,
-  grape: grape,
-  grapes: grapes,
+  apple,
+  apricot,
+  avocado,
+  banana,
+  blackberry,
+  blueberry,
+  cherry,
+  dragonfruit,
+  durian,
+  feijoa,
+  fig,
+  gooseberry,
+  greenapple,
+  grape,
+  grapes,
   guava: none,
   kiwi: none,
   kiwifruit: none,
-  lemon: lemon,
-  lime: lime,
-  lingonberry: lingonberry,
-  lychee: lychee,
+  lemon,
+  lime,
+  lingonberry,
+  lychee,
   mango: none,
-  melon: melon,
+  melon,
   morus: none,
-  orange: orange,
+  orange,
   papaya: papaya,
-  passionfruit: passionfruit,
-  pear: pear,
-  persimmon: persimmon,
+  passionfruit,
+  pear,
+  persimmon,
   pineapple: none,
-  pitahaya: pitahaya,
-  plum: plum,
-  pomegranate: pomegranate,
-  raspberry: raspberry,
-  strawberry: strawberry,
-  tangerine: tangerine,
-  tomato: tomato,
-  watermelon: watermelon,
+  pitahaya,
+  plum,
+  pomegranate,
+  raspberry,
+  strawberry,
+  tangerine,
+  tomato,
+  watermelon,
 };
 
 const fruitListing = (data) => {
@@ -149,7 +148,6 @@ const fruitListing = (data) => {
 export default function SingleFruit({ url }) {
   const [singleFruitSearch, setSingleFruitSearch] = useState("");
 
-
   useEffect(() => {
     if (url)
       fetch(`${url}`)
@@ -168,7 +166,7 @@ export default function SingleFruit({ url }) {
       </div>
     );
   }
-  if (fruitListing === null) {
+  if (fruitListing === "") {
     return (
       <div className="SingleFruit">
         <NoResults />
@@ -182,11 +180,3 @@ export default function SingleFruit({ url }) {
     );
   }
 }
-
-/*
-
-<div className="listing-image">
-            <FruitImage />
-          </div>
-
-          */

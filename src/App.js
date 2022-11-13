@@ -1,10 +1,10 @@
 import React from "react";
-import About from "./About.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home.js";
+import About from "./About.js";
 import Menu from "./Menu.js";
 import Process from "./Process.js";
 import Smoothies from "./Smoothies.js";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (

@@ -4,7 +4,7 @@ import { useState } from "react";
 import MultipleFruits from "./MultipleFruits";
 import Dropdowns from "./Dropdowns";
 import Sort from "./Sort";
-import Listing from "./Listing";
+import "./Dropdowns.css";
 
 export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
   const [showFruit, setShowFruits] = useState(false);
@@ -45,7 +45,6 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
           <div className="sort-section">
             <Sort sortBy={sortBy} setSortBy={setSortBy} />
           </div>
-          <Listing />
         </div>
       </div>
     </div>

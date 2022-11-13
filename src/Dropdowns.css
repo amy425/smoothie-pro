@@ -24,8 +24,9 @@
 
 .dropdowns {
   background-color: #fff;
-  padding: 20px 0px 0px;
+  padding: 20px 0px 10px;
   text-align: left;
+  border-radius: 10px;
 }
 
 .dropdowns p {
@@ -41,11 +42,15 @@
   margin-right: 15px;
 }
 
+.accordion-body {
+  border-radius: 10px;
+}
+
 .accordion-button {
-  /*border-top: solid 1px var(--bs-border-color);*/
   font-size: 16px;
   font-weight: 600;
   color: rgb(124, 88, 124);
+  margin: 0px !important;
 }
 
 .accordion-item {
@@ -57,7 +62,6 @@
   color: #fff;
 }
 
-/*.accordion {
-  accordion-active-color: red !important;
-  accordion-active-bg: #e7f1ff;
-}*/
+div.ViewAllFruits {
+  padding-bottom: 20px;
+}

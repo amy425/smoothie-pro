@@ -1,7 +1,29 @@
 /* Site wide */
+h1 {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  color: rgb(124, 88, 124);
+}
+
 .btn {
   background-color: rgb(124, 88, 124);
   border-color: rgb(124, 88, 124);
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: rgb(124, 88, 124);
+  --bs-btn-border-color: rgb(124, 88, 124);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(124, 88, 124);
+  --bs-btn-hover-border-color: rgb(124, 88, 124);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(124, 88, 124);
+  --bs-btn-active-border-color: rgb(124, 88, 124);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: rgb(124, 88, 124);
+  --bs-btn-disabled-border-color: rgb(124, 88, 124);
 }
 
 .btn:hover {
@@ -26,6 +48,12 @@
   font-weight: 600;
 }
 /* HEADER END */
+
+/*Loading Spinner*/
+.loading-spinner {
+  color: rgb(124, 88, 124);
+}
+/*LOADING SPINNER END*/
 
 /* Footer */
 footer {

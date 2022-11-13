@@ -27,3 +27,7 @@
 .Process .heading-info:last-child {
   margin: 0px 0px 0px 10px;
 }
+
+.divider {
+  margin-bottom: 0;
+}

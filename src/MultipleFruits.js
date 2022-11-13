@@ -184,22 +184,8 @@ export default function MultipleFruits({
       })
       .then((data) => {
         sortProducts(data);
-        check(data);
       });
   };
-
-  function check(data) {
-    const result = Array.isArray(data);
-    if (result === true) {
-      console.log(`${data} is an array.`);
-    } else {
-      console.log(`${data} is not an array.`);
-      let newArray = [].concat(data);
-      console.log(newArray);
-      console.log(newArray[0].id);
-      console.log(newArray[0].family);
-    }
-  }
 
   if (loading)
     return (
@@ -220,61 +206,11 @@ export default function MultipleFruits({
 
   return (
     <div className="MultipleFruits">
-      <div className="section">
-        <div className="catalogue">
-          {fruits.map((fruit) => (
-            <RenderFruit key={fruit.id} fruit={fruit} />
-          ))}
-        </div>
+      <div className="catalogue">
+        {fruits.map((fruit) => (
+          <RenderFruit key={fruit.id} fruit={fruit} />
+        ))}
       </div>
     </div>
   );
 }
-
-/*
-
-        <div className="listing-details">
-          <div className="listing-info">
-            <h4>Info</h4>
-            <ul>
-              <li>
-                <span className="detail-headings">Genus: </span>
-                {fruit.genus}
-              </li>
-              <li>
-                <span className="detail-headings">Family: </span>
-                {fruit.family}
-              </li>
-              <li>
-                <span className="detail-headings">Order: </span>
-                {fruit.order}
-              </li>
-            </ul>
-          </div>
-          <div className="listing-nutrition">
-            <h4>Nutrition</h4>
-            <ul>
-              <li>
-                <span className="detail-headings">Carbohydrates: </span>
-                {fruit.nutritions.carbohydrates}
-              </li>
-              <li>
-                <span className="detail-headings">Protein: </span>
-                {fruit.nutritions.protein}
-              </li>
-              <li>
-                <span className="detail-headings">Fat: </span>
-                {fruit.nutritions.fat}
-              </li>
-              <li>
-                <span className="detail-headings">Calories: </span>
-                {fruit.nutritions.calories}
-              </li>
-              <li>
-                <span className="detail-headings">Sugar: </span>
-                {fruit.nutritions.sugar}
-              </li>
-            </ul>
-          </div>
-        </div>
-        */
