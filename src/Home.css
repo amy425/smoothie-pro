@@ -7,11 +7,6 @@ body {
   min-height: 61vh;
 }
 
-.other-search-options {
-  display: flex;
-  justify-content: center;
-}
-
 .other-search-options button {
   font-size: 14px;
   margin: 5px;
@@ -24,10 +19,6 @@ body {
 
 .main {
   display: flex;
-}
-
-.left-main {
-  position: sticky;
 }
 
 .container-fluid {
