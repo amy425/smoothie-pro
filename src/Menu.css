@@ -23,3 +23,32 @@
 .divider {
   margin-bottom: 0;
 }
+
+/*SMOOTHIES*/
+
+.recipe,
+.box-info {
+  display: flex;
+  justify-content: center;
+}
+
+.recipe .smoothie-images {
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+}
+
+.recipe-info {
+  margin: 20px;
+  text-align: left;
+  padding: 20px;
+}
+
+.recipe-image {
+  width: 200px;
+  margin: 10px;
+}
+
+.SmoothieRecipe h3 {
+  text-align: left;
+}
