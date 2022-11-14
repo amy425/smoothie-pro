@@ -43,6 +43,7 @@ import guava from "./images/fruits/guava.jpg";
 import mango from "./images/fruits/mango.jpg";
 import morus from "./images/fruits/morus.jpeg";
 import pineapple from "./images/fruits/pineapple.jpg";
+import Sort from "./Sort";
 
 export const imageMapping = {
   apple,
@@ -150,6 +151,8 @@ function RenderFruit({ fruit }) {
 }
 
 export default function MultipleFruits({
+  setSortBy,
+  active,
   singleFruitUrl,
   showRandomFruit,
   url,
@@ -159,10 +162,17 @@ export default function MultipleFruits({
   const [loading, setLoading] = useState(false);
 
   function sortProducts(data) {
+    const lowercaseSortby = sortBy.toLowerCase();
     const sortedFruits = data.sort((a, b) => {
-      if (a[sortBy])
-        return a[sortBy].toLowerCase() > b[sortBy].toLowerCase() ? 1 : -1;
-      else return a.nutritions[sortBy] > b.nutritions[sortBy] ? 1 : -1;
+      if (a[lowercaseSortby])
+        return a[lowercaseSortby].toLowerCase() >
+          b[lowercaseSortby].toLowerCase()
+          ? 1
+          : -1;
+      else
+        return a.nutritions[lowercaseSortby] > b.nutritions[lowercaseSortby]
+          ? 1
+          : -1;
     });
     setFruits([...sortedFruits]);
     setLoading(false);
@@ -214,6 +224,11 @@ export default function MultipleFruits({
 
   return (
     <div className="MultipleFruits">
+      {fruits.length && (
+        <div className={"sort-section " + active}>
+          <Sort sortBy={sortBy} setSortBy={setSortBy} />
+        </div>
+      )}
       <div className="catalogue">
         {fruits.map((fruit) => (
           <RenderFruit key={fruit.id} fruit={fruit} />

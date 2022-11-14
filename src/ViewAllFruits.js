@@ -2,7 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import MultipleFruits from "./MultipleFruits";
-import Sort from "./Sort";
 import "./Dropdowns.css";
 
 export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
@@ -32,16 +31,15 @@ export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
         <Button onClick={randomUrl}>Random fruit</Button>
       </div>
       <div className="fruit-display">
-        <div className={"sort-section " + active}>
-          <Sort sortBy={sortBy} setSortBy={setSortBy} />
-        </div>
         <div className="main">
-          {(showFruit || showRandomFruit > 0) && (
+          {(showFruit || showRandomFruit > 0 || singleFruitUrl) && (
             <MultipleFruits
               showRandomFruit={showRandomFruit}
               url={url}
               singleFruitUrl={singleFruitUrl}
-              sortBy={sortBy.toLowerCase()}
+              sortBy={sortBy}
+              setSortBy={setSortBy}
+              active={active}
             />
           )}
         </div>

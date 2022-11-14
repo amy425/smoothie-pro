@@ -2,7 +2,6 @@ import React from "react";
 import "./MultipleFruits.css";
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
-import LoadingSpinner from "./LoadingSpinner";
 import "./Smoothies.css";
 import MultipleFruits from "./MultipleFruits";
 
@@ -89,7 +88,6 @@ export const imageMapping = {
   watermelon,
 };
 
-
 export default function SmoothieFruits() {
   const [fruits, setFruits] = useState([]);
 
@@ -109,7 +107,11 @@ export default function SmoothieFruits() {
     return (
       <div className="Listing" key={fruit.id}>
         <Card className="bg-dark text-white smoothie-listing">
-          <Card.Img src={imageMapping[fruit.name.toLowerCase()]} alt={fruit.name} className="smoothie-images" />
+          <Card.Img
+            src={imageMapping[fruit.name.toLowerCase()]}
+            alt={fruit.name}
+            className="smoothie-images"
+          />
           <Card.ImgOverlay>
             <Card.Title className="smoothie-title">{fruit.name}</Card.Title>
           </Card.ImgOverlay>
@@ -177,7 +179,7 @@ export default function SmoothieFruits() {
   } else {
     return (
       <div className="MultipleFruits">
-        <MultipleFruits/>
+        <MultipleFruits />
       </div>
     );
   }
