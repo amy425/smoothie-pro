@@ -3,7 +3,7 @@ import "./SmoothieRecipe.css";
 import smoothie from "./images/smoothies/smoothie.jpg";
 import strawberry from "./images/fruits/strawberry.jpg";
 import banana from "./images/fruits/banana.jpg";
-import tangerine from "./images/fruits/tangerine.jpg";
+import pineapple3 from "./pineapple3.png";
 
 import Card from "react-bootstrap/Card";
 
@@ -47,7 +47,7 @@ export default function SmoothieRecipe() {
           </Card>
           <Card className="bg-dark text-white smoothie-listing">
             <Card.Img
-              src={tangerine}
+              src={pineapple3}
               alt="Tropical twist smoothie"
               className="smoothie-images"
             />
