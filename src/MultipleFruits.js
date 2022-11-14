@@ -44,7 +44,6 @@ import mango from "./images/fruits/mango.jpg";
 import morus from "./images/fruits/morus.jpeg";
 import pineapple from "./images/fruits/pineapple.jpg";
 import Sort from "./Sort";
-import NoResults from "./NoResults";
 
 export const imageMapping = {
   apple,

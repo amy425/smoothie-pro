@@ -2,7 +2,6 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import MultipleFruits from "./MultipleFruits";
-import Sort from "./Sort";
 import "./Dropdowns.css";
 
 export default function ViewAllFruits({ singleFruitUrl, url, searchToFruit }) {
