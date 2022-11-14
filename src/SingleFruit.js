@@ -42,7 +42,7 @@ import kiwifruit from "./images/fruits/kiwifruit.jpg";
 import guava from "./images/fruits/guava.jpg";
 import mango from "./images/fruits/mango.jpg";
 import morus from "./images/fruits/morus.jpeg";
-import pineapple from "./images/fruits/pineapple.png";
+import pineapple from "./images/fruits/pineapple.jpg";
 
 const imageMapping = {
   apple,
