@@ -91,7 +91,7 @@ const fruitListing = (data) => {
     <div className="Listing">
       <Card className="bg-dark text-white smoothie-listing">
         <Card.Img
-          src={imageMapping[data.name.toLowerCase()]}
+          src={imageMapping[data?.name?.toLowerCase()]}
           alt={data.name}
           className="smoothie-images"
         />
@@ -159,18 +159,20 @@ export default function SingleFruit({ url }) {
           return response.json();
         })
         .then((data) => {
-          setSingleFruitSearch(fruitListing(data));
+          if (data.name) setSingleFruitSearch(fruitListing(data));
+        })
+        .catch((err) => {
+          setSingleFruitSearch("");
         });
   }, [url]);
-
-  if (fruitListing) {
+  if (singleFruitSearch) {
     return (
       <div className="SingleFruit">
         <div className="catalogue">{singleFruitSearch}</div>
       </div>
     );
   }
-  if (fruitListing === "") {
+  if (singleFruitSearch === "") {
     return (
       <div className="SingleFruit">
         <NoResults />
