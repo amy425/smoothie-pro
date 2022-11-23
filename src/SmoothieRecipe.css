@@ -6,8 +6,9 @@
 
 .recipe .smoothie-images {
   margin: 20px;
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: auto;
+  
 }
 
 .recipe-info {

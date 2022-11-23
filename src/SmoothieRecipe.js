@@ -20,7 +20,6 @@ export default function SmoothieRecipe() {
         </div>
         <div className="recipe-info">
           <h2>Tropical Twist</h2>
-          <p>Lorem ipsum sit dolor amet.</p>
           <h4>Ingredients:</h4>
           <p>SERVES 2</p>
           <ul>

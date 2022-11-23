@@ -22,4 +22,19 @@
 
 .divider {
   margin-bottom: 0;
+
+}
+
+
+h2.smoothie.name {
+  color:rgb(124, 88, 124);
+  text-align: center;
+  display:flex;
+  align-items: center;
+  margin-left:35rem;
+}
+
+div.listing-card{
+  background:auto;
+  width:auto;
 }
