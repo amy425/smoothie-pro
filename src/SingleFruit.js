@@ -160,6 +160,7 @@ export default function SingleFruit({ url }) {
         })
         .then((data) => {
           if (data.name) setSingleFruitSearch(fruitListing(data));
+          else throw data.error;
         })
         .catch((err) => {
           setSingleFruitSearch("");
