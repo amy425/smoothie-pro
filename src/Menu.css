@@ -1,3 +1,9 @@
+.Menu .price {
+  text-decoration: underline 0.1rem;
+  color: rgb(124, 88, 124);
+  font-size: 1.5rem;
+}
+
 .Menu .smoothie-bar {
   display: flex;
   flex-wrap: wrap;
@@ -6,18 +12,6 @@
 
 .Menu .smoothie-bar Button {
   margin: 5px;
-}
-
-.Menu .smoothies {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.Menu h2.price {
-  text-decoration: underline 0.1rem;
-  color: rgb(124, 88, 124);
-  font-size: 1.5rem;
 }
 
 .divider {
@@ -37,10 +31,10 @@ div.listing-card {
   width: auto;
 }
 
-.recipe,
 .box-info {
   display: flex;
   justify-content: center;
+  margin-top: 40px;
 }
 
 .recipe .smoothie-images {
@@ -49,29 +43,9 @@ div.listing-card {
   max-height: auto;
 }
 
-.recipe-info {
-  margin: 20px;
-  text-align: left;
-  padding: 20px;
-}
-
-.recipe-image {
-  width: 200px;
-  margin: 10px;
-}
-
-.SmoothieRecipe h3 {
-  text-align: left;
-}
-
 .smoothie-images {
   width: 300px;
   height: 300px;
-  border-radius: 0;
-}
-
-.smoothie-images:hover {
-  width: 300px;
   border-radius: 0;
 }
 
@@ -95,11 +69,35 @@ div.listing-card {
   opacity: 1 !important;
 }
 
-.Listing {
-  display: flex;
-  justify-content: center;
-}
-
 .smoothie-section {
   display: flex;
+}
+
+.Menu li {
+  list-style: none;
+}
+
+.Menu ul {
+  padding-left: 0px;
+}
+
+.Menu h4 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.Menu .card-body h4 {
+  padding-top: 70px;
+}
+
+.Menu .card-body {
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Menu .column {
+    display: none !important;
+  }
 }

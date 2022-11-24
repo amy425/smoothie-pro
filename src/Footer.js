@@ -65,6 +65,8 @@ export default function Footer() {
 
             <div className="footer-nav">
               <h4>Explore</h4>
+              <a href="/">Home</a>
+              <br></br>
               <a href="/about">About</a>
               <br></br>
               <a href="/menu">Menu</a>
