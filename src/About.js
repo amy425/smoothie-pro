@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="About">
       <Navigation />
-      <div className="container">
+      <div className="container-fluid">
         <h1>About</h1>
         <div className="section">
           <p className="about">
